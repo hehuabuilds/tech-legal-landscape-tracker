@@ -1,65 +1,76 @@
-import Image from "next/image";
+import GraphView from "@/components/GraphView";
+import DataTable from "@/components/DataTable";
+import Legend from "@/components/Legend";
+import { getLawsuits, getStats } from "@/lib/data";
 
 export default function Home() {
+  const lawsuits = getLawsuits();
+  const stats = getStats(lawsuits);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-slate-100 text-slate-900">
+      <div className="mx-auto max-w-7xl px-4 py-8">
+        <header className="mb-6">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            AI Copyright Lawsuit Map
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            An interactive map of copyright lawsuits against AI companies.
+            Central nodes are AI companies (defendants); surrounding nodes are
+            plaintiffs, colored by type. Each edge is a lawsuit labeled with its
+            status. Every case links to at least one source — this is an
+            informational tracker, not legal advice.
           </p>
+        </header>
+
+        {/* Stats */}
+        <section className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
+          {[
+            { label: "Cases", value: stats.total },
+            { label: "AI companies", value: stats.companies },
+            { label: "Plaintiffs", value: stats.plaintiffs },
+            { label: "Verified", value: stats.verified },
+            { label: "Needs review", value: stats.needsReview },
+          ].map((s) => (
+            <div
+              key={s.label}
+              className="rounded-xl border border-slate-200 bg-white p-4"
+            >
+              <div className="text-2xl font-bold text-slate-900">{s.value}</div>
+              <div className="text-xs text-slate-500">{s.label}</div>
+            </div>
+          ))}
+        </section>
+
+        <div className="mb-4">
+          <Legend />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {/* Graph */}
+        <section className="mb-8">
+          <div className="mb-2 flex items-baseline justify-between">
+            <h2 className="text-lg font-semibold">Network map</h2>
+            <p className="text-xs text-slate-500">
+              Drag nodes to rearrange · click an edge for case details &amp;
+              sources
+            </p>
+          </div>
+          <GraphView lawsuits={lawsuits} />
+        </section>
+
+        {/* Table */}
+        <section className="mb-10">
+          <h2 className="mb-2 text-lg font-semibold">All cases</h2>
+          <DataTable lawsuits={lawsuits} />
+        </section>
+
+        <footer className="border-t border-slate-200 pt-4 text-xs text-slate-400">
+          Data compiled from public court dockets (CourtListener) and news
+          reporting. Statuses reflect the last recorded update and may lag
+          ongoing litigation. Contributions and corrections should be
+          source-backed.
+        </footer>
+      </div>
+    </main>
   );
 }
