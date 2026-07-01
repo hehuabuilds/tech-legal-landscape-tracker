@@ -1,0 +1,3480 @@
+[
+  {
+    "id": "bartz-v-anthropic-settlement",
+    "title": "Bartz v. Anthropic PBC (authors class action / $1.5B settlement)",
+    "actionType": "settlement",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-N.D.Cal.",
+    "filingDate": "2025-09-05",
+    "status": "settled",
+    "summary": "Authors alleged Anthropic pirated hundreds of thousands of books from shadow libraries (LibGen, PiLiMi) to train its Claude models. After Judge Alsup ruled training on lawfully acquired books was fair use but pirated copies were not, Anthropic agreed to a landmark $1.5 billion settlement covering roughly 500,000 works.",
+    "parties": [
+      {
+        "name": "Andrea Bartz, Charles Graeber, Kirk Wallace Johnson (author class)",
+        "category": "authors",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Anthropic",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.npr.org/2025/09/05/nx-s1-5529404/anthropic-settlement-authors-copyright-ai",
+        "label": "NPR"
+      },
+      {
+        "url": "https://www.anthropiccopyrightsettlement.com/",
+        "label": "Official settlement site"
+      },
+      {
+        "url": "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/",
+        "label": "Authors Guild"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-06-23",
+        "event": "Judge Alsup rules training on lawfully acquired books is fair use but Anthropic liable for using pirated copies",
+        "status": "judgment"
+      },
+      {
+        "date": "2025-09-05",
+        "event": "Anthropic agrees to ~$1.5B settlement (~$3,000 per work) covering ~500,000 books",
+        "status": "settled"
+      },
+      {
+        "date": "2025-09-25",
+        "event": "Court grants preliminary approval of settlement",
+        "status": "settled"
+      },
+      {
+        "date": "2026-05-14",
+        "event": "Final approval (fairness) hearing scheduled",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "kadrey-v-meta-platforms",
+    "title": "Kadrey et al. v. Meta Platforms, Inc.",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-N.D.Cal.",
+    "filingDate": "2023-07-07",
+    "status": "judgment",
+    "summary": "Thirteen authors including Richard Kadrey, Sarah Silverman and Ta-Nehisi Coates alleged Meta trained its Llama models on their books downloaded from shadow libraries. In June 2025 Judge Chhabria granted summary judgment to Meta on the training fair-use question, but warned the ruling was narrow and turned on a weak plaintiff record.",
+    "parties": [
+      {
+        "name": "Richard Kadrey, Sarah Silverman, Ta-Nehisi Coates et al.",
+        "category": "authors",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Meta",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.goodwinlaw.com/en/insights/publications/2025/06/alerts-practices-aiml-northern-district-of-california-judge-rules",
+        "label": "Goodwin analysis"
+      },
+      {
+        "url": "https://caselaw.findlaw.com/court/us-dis-crt-n-d-cal/117422847.html",
+        "label": "FindLaw opinion"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-07-07",
+        "event": "Authors file copyright class action against Meta in N.D. Cal.",
+        "status": "sued"
+      },
+      {
+        "date": "2025-06-25",
+        "event": "Judge Chhabria grants Meta summary judgment on fair use for LLM training; notes ruling is fact-specific and limited",
+        "status": "judgment"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "nyt-v-openai-microsoft-sdny",
+    "title": "The New York Times Company v. Microsoft Corp. & OpenAI",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2023-12-27",
+    "status": "pending",
+    "summary": "The New York Times alleges OpenAI and Microsoft used millions of its articles without permission to train ChatGPT and related models. The court largely denied OpenAI's motion to dismiss in April 2025, and in a closely watched discovery fight OpenAI was ordered to produce roughly 20 million de-identified ChatGPT logs.",
+    "parties": [
+      {
+        "name": "The New York Times Company",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Microsoft",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2023cv11195/612697/514/",
+        "label": "SDNY MTD opinion (Apr 4, 2025)"
+      },
+      {
+        "url": "https://news.bloomberglaw.com/ip-law/openai-must-turn-over-20-million-chatgpt-logs-judge-affirms",
+        "label": "Bloomberg Law (log discovery)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-12-27",
+        "event": "NYT files copyright suit against OpenAI and Microsoft in SDNY",
+        "status": "sued"
+      },
+      {
+        "date": "2025-04-04",
+        "event": "Judge Stein largely denies motions to dismiss; core infringement claims survive",
+        "status": "pending"
+      },
+      {
+        "date": "2025-05-13",
+        "event": "Magistrate Judge Wang orders OpenAI to preserve output log data",
+        "status": "pending"
+      },
+      {
+        "date": "2026-01-05",
+        "event": "Judge Stein affirms order compelling production of ~20 million ChatGPT logs",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "in-re-openai-copyright-mdl-3143",
+    "title": "In re OpenAI, Inc. Copyright Infringement Litigation (Authors Guild, Tremblay, Silverman et al.), MDL No. 3143",
+    "actionType": "class_action",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2023-09-19",
+    "status": "pending",
+    "summary": "The Authors Guild and author plaintiffs (including Tremblay, Silverman and Kadrey) allege OpenAI copied their books, in part from shadow libraries, to train ChatGPT. The JPML consolidated the author and publisher suits into an SDNY MDL in April 2025, and in October 2025 the court allowed a consolidated output-based infringement theory to proceed.",
+    "parties": [
+      {
+        "name": "The Authors Guild; Paul Tremblay, Sarah Silverman, Richard Kadrey et al.",
+        "category": "authors",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Microsoft",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.jpml.uscourts.gov/sites/jpml/files/MDL-3143-Transfer_Order-3-25.pdf",
+        "label": "JPML transfer order (Apr 3, 2025)"
+      },
+      {
+        "url": "https://www.bakerlaw.com/in-re-openai-inc-copyright-infringement-litigation/",
+        "label": "BakerHostetler case tracker"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-09-19",
+        "event": "Authors Guild files class action against OpenAI in SDNY",
+        "status": "sued"
+      },
+      {
+        "date": "2025-04-03",
+        "event": "JPML consolidates OpenAI author/publisher suits into MDL No. 3143 (SDNY)",
+        "status": "pending"
+      },
+      {
+        "date": "2025-10-27",
+        "event": "Court denies OpenAI's motion to dismiss consolidated output-based infringement claim",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "thomson-reuters-v-ross-intelligence",
+    "title": "Thomson Reuters Enterprise Centre GmbH v. Ross Intelligence Inc.",
+    "actionType": "appeal",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-D.Del.",
+    "filingDate": "2020-05-06",
+    "status": "appealed",
+    "summary": "Thomson Reuters sued legal-AI startup Ross Intelligence for using Westlaw headnotes to train a competing legal-research tool. In February 2025 Judge Bibas granted partial summary judgment and rejected Ross's fair-use defense — the first major AI training fair-use ruling — and Ross's interlocutory appeal is now before the Third Circuit.",
+    "parties": [
+      {
+        "name": "Thomson Reuters Enterprise Centre GmbH",
+        "category": "publishers",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Ross Intelligence",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.jenner.com/en/news-insights/client-alerts/court-decides-that-use-of-copyrighted-works-in-ai-training-is-not-fair-use-thomson-reuters-enterprise-centre-gmbh-v-ross-intelligence-inc",
+        "label": "Jenner & Block client alert"
+      },
+      {
+        "url": "https://ipwatchdog.com/2025/10/01/amici-back-ai-companys-third-circuit-appeal-summary-judgment-thomson-reuters/",
+        "label": "IPWatchdog (Third Circuit appeal)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2020-05-06",
+        "event": "Thomson Reuters files copyright suit against Ross Intelligence in D. Del.",
+        "status": "sued"
+      },
+      {
+        "date": "2025-02-11",
+        "event": "Judge Bibas grants partial summary judgment and rejects Ross's fair-use defense",
+        "status": "judgment"
+      },
+      {
+        "date": "2025-06-01",
+        "event": "Third Circuit grants Ross's petition for interlocutory appeal",
+        "status": "appealed"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "raw-story-v-openai-sdny",
+    "title": "Raw Story Media, Inc. v. OpenAI Inc.",
+    "actionType": "appeal",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2024-02-28",
+    "status": "appealed",
+    "summary": "Raw Story and AlterNet allege OpenAI removed copyright-management information from their articles used to train ChatGPT, violating the DMCA. Judge McMahon dismissed for lack of Article III standing, and the plaintiffs are pursuing a Second Circuit appeal.",
+    "parties": [
+      {
+        "name": "Raw Story Media, Inc. and AlterNet Media, Inc.",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://news.bloomberglaw.com/ip-law/openai-defeats-raw-story-copyright-training-lawsuit-for-now",
+        "label": "Bloomberg Law"
+      },
+      {
+        "url": "https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2024cv01514/616533/178/",
+        "label": "Justia docket (1:24-cv-01514)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-02-28",
+        "event": "Raw Story and AlterNet file DMCA suit against OpenAI in SDNY",
+        "status": "sued"
+      },
+      {
+        "date": "2024-11-07",
+        "event": "Judge McMahon dismisses complaint for lack of Article III standing",
+        "status": "dismissed"
+      },
+      {
+        "date": "2025-06-18",
+        "event": "Reconsideration denied; plaintiffs pursue Second Circuit appeal",
+        "status": "appealed"
+      }
+    ],
+    "confidence": "medium",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "needs_review"
+  },
+  {
+    "id": "intercept-media-v-openai-sdny",
+    "title": "The Intercept Media, Inc. v. OpenAI, Inc.",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2024-02-28",
+    "status": "pending",
+    "summary": "The Intercept alleges OpenAI stripped copyright-management information from its articles used to train ChatGPT in violation of the DMCA. In a February 2025 opinion, Judge Rakoff allowed the Section 1202(b)(1) CMI-removal claim against OpenAI to proceed while dismissing Microsoft, creating an SDNY split with the Raw Story ruling.",
+    "parties": [
+      {
+        "name": "The Intercept Media, Inc.",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Microsoft",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.loeb.com/en/insights/publications/2025/02/intercept-media-inc-v-open-ai-inc",
+        "label": "Loeb & Loeb analysis"
+      },
+      {
+        "url": "https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2024cv01515/616536/127/",
+        "label": "Justia docket (1:24-cv-01515)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-02-28",
+        "event": "The Intercept files DMCA suit against OpenAI and Microsoft in SDNY",
+        "status": "sued"
+      },
+      {
+        "date": "2024-11-21",
+        "event": "Judge Rakoff dismisses Microsoft and one DMCA sub-claim, allows 1202(b)(1) claim vs OpenAI",
+        "status": "pending"
+      },
+      {
+        "date": "2025-02-20",
+        "event": "Court issues written opinion explaining DMCA/standing reasoning",
+        "status": "pending"
+      }
+    ],
+    "confidence": "medium",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "needs_review"
+  },
+  {
+    "id": "ziff-davis-v-openai-ddel",
+    "title": "Ziff Davis, Inc. v. OpenAI, Inc.",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-D.Del.",
+    "filingDate": "2025-04-24",
+    "status": "sued",
+    "summary": "Digital publisher Ziff Davis (Mashable, PCMag, Lifehacker) alleges OpenAI reproduced its works verbatim and created derivatives to train ChatGPT despite robots.txt instructions, and removed copyright-management information. The suit was filed in the District of Delaware in April 2025.",
+    "parties": [
+      {
+        "name": "Ziff Davis, Inc.",
+        "category": "publishers",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://news.bloomberglaw.com/litigation/openai-hit-with-copyright-infringement-suit-from-ziff-davis",
+        "label": "Bloomberg Law"
+      },
+      {
+        "url": "https://www.courthousenews.com/openai-hit-with-copyright-lawsuit-by-digital-media-giant-ziff-davis/",
+        "label": "Courthouse News"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-04-24",
+        "event": "Ziff Davis files copyright infringement suit against OpenAI in D. Del.",
+        "status": "sued"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "advance-conde-nast-v-cohere",
+    "title": "Advance Local Media LLC et al. v. Cohere Inc.",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2025-02-13",
+    "status": "pending",
+    "summary": "Fourteen news and magazine publishers including Conde Nast, Forbes, The Atlantic, The Guardian and the Los Angeles Times allege AI startup Cohere reproduced their articles, sometimes near-verbatim, to train its Command models and generated infringing and hallucinated outputs. In November 2025 the court denied most of Cohere's motion to dismiss.",
+    "parties": [
+      {
+        "name": "Advance Local Media, Conde Nast, Forbes, The Atlantic, Los Angeles Times et al.",
+        "category": "publishers",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Cohere",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://news.bloomberglaw.com/ip-law/conde-nast-copyright-lawsuit-over-coheres-ai-training-advances",
+        "label": "Bloomberg Law"
+      },
+      {
+        "url": "https://www.courtlistener.com/docket/69636122/advance-local-media-llc-v-cohere-inc/",
+        "label": "CourtListener docket"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-02-13",
+        "event": "Publishers file copyright and trademark suit against Cohere in SDNY",
+        "status": "sued"
+      },
+      {
+        "date": "2025-11-13",
+        "event": "Judge McMahon denies most of Cohere's motion to dismiss; output-based and secondary claims advance",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "dow-jones-nypost-v-perplexity",
+    "title": "Dow Jones & Company, Inc. and NYP Holdings v. Perplexity AI, Inc.",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2024-10-21",
+    "status": "pending",
+    "summary": "Dow Jones (The Wall Street Journal) and the New York Post, both News Corp units, allege Perplexity copied their works to populate retrieval databases and produced outputs reproducing their content and falsely attributing hallucinated text to them. In 2025 the court denied Perplexity's motion to dismiss for lack of personal jurisdiction and to transfer venue.",
+    "parties": [
+      {
+        "name": "Dow Jones & Company, Inc. and NYP Holdings, Inc. (New York Post)",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Perplexity",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://variety.com/2024/biz/news/news-corp-dow-jones-ny-post-sue-perplexity-copyright-infringement-1236184900/",
+        "label": "Variety"
+      },
+      {
+        "url": "https://www.loeb.com/en/insights/publications/2025/08/dow-jones-and-company-inc-v-perplexity-ai-inc",
+        "label": "Loeb & Loeb analysis"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-10-21",
+        "event": "Dow Jones and NY Post file copyright and trademark suit against Perplexity in SDNY",
+        "status": "sued"
+      },
+      {
+        "date": "2025-08-01",
+        "event": "Court denies Perplexity's motion to dismiss for personal jurisdiction and to transfer venue",
+        "status": "pending"
+      }
+    ],
+    "confidence": "medium",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "needs_review"
+  },
+  {
+    "id": "umg-sony-warner-v-suno",
+    "title": "UMG Recordings, Inc. et al. v. Suno, Inc.",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-D.Mass.",
+    "filingDate": "2024-06-24",
+    "status": "pending",
+    "summary": "The major record labels sued AI music generator Suno for training on unlicensed master sound recordings. Warner Music settled and struck a licensing partnership with Suno in November 2025, while UMG and Sony continued litigating.",
+    "parties": [
+      {
+        "name": "UMG Recordings, Inc.",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Sony Music Entertainment",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Warner Music Group / Atlantic Recording",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Suno",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2025/11/25/warner-music-signs-deal-with-ai-music-startup-suno-settles-lawsuit/",
+        "label": "TechCrunch (Warner/Suno settlement)"
+      },
+      {
+        "url": "https://www.musicbusinessworldwide.com/suno-fights-to-keep-warner-music-settlement-terms-away-from-umg-and-sony/",
+        "label": "Music Business Worldwide"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-06-24",
+        "event": "RIAA-coordinated suit filed by UMG, Sony and Warner against Suno in D. Mass.",
+        "status": "sued"
+      },
+      {
+        "date": "2025-11-25",
+        "event": "Warner Music settles with Suno and announces licensing partnership; UMG and Sony continue litigating",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "umg-v-udio",
+    "title": "UMG Recordings, Inc. et al. v. Uncharted Labs, Inc. (Udio)",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2024-06-24",
+    "status": "pending",
+    "summary": "The major record labels sued the maker of AI music generator Udio for training on copyrighted sound recordings. UMG settled in late October 2025 and agreed to co-develop a licensed AI music platform, while other labels' claims continued.",
+    "parties": [
+      {
+        "name": "UMG Recordings, Inc.",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Sony Music Entertainment",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Warner Music Group",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Udio",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2025/11/19/warner-music-settles-copyright-lawsuit-with-udio-signs-deal-for-ai-music-platform/",
+        "label": "TechCrunch (Warner/Udio settlement)"
+      },
+      {
+        "url": "https://www.hollywoodreporter.com/music/music-industry-news/universal-music-group-announces-settlement-with-udio-1236414023/",
+        "label": "Hollywood Reporter (UMG/Udio)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-06-24",
+        "event": "RIAA-coordinated suit filed by UMG, Sony and Warner against Udio in SDNY",
+        "status": "sued"
+      },
+      {
+        "date": "2025-10-29",
+        "event": "UMG announces settlement with Udio plus licensing agreement for a new AI music platform",
+        "status": "licensing_agreement"
+      },
+      {
+        "date": "2025-11-19",
+        "event": "Warner Music settles with Udio and signs licensing deal",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "concord-v-anthropic-lyrics",
+    "title": "Concord Music Group, Inc. et al. v. Anthropic PBC",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-N.D.Cal.",
+    "filingDate": "2023-10-18",
+    "status": "pending",
+    "summary": "Music publishers led by Concord and Universal Music allege Anthropic's Claude models were trained on and reproduce copyrighted song lyrics. In early 2025 Anthropic agreed to maintain lyric guardrails, and the court denied the publishers a preliminary injunction and trimmed some secondary-infringement claims.",
+    "parties": [
+      {
+        "name": "Concord Music Group, Inc.; Universal Music Corp.; ABKCO",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Anthropic",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.courtlistener.com/docket/68889092/concord-music-group-inc-v-anthropic-pbc/",
+        "label": "CourtListener docket"
+      },
+      {
+        "url": "https://www.hollywoodreporter.com/business/business-news/anthropic-wins-first-round-lawsuit-music-publishers-song-lyrics-1236173148/",
+        "label": "Hollywood Reporter"
+      },
+      {
+        "url": "https://musically.com/2025/03/27/judge-denies-music-publishers-preliminary-injunction-on-anthropic/",
+        "label": "Music Ally"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-10-18",
+        "event": "Publishers sue Anthropic over lyrics (originally M.D. Tenn., transferred to N.D. Cal.)",
+        "status": "sued"
+      },
+      {
+        "date": "2025-01-02",
+        "event": "Court enters stipulated order requiring Anthropic to maintain lyric guardrails",
+        "status": "pending"
+      },
+      {
+        "date": "2025-03-25",
+        "event": "Judge Lee denies publishers' preliminary injunction and dismisses contributory/vicarious claims",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "getty-v-stability-ai-us",
+    "title": "Getty Images (US), Inc. v. Stability AI, Inc. (US)",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-N.D.Cal.",
+    "filingDate": "2023-02-03",
+    "status": "pending",
+    "summary": "Getty Images alleges Stability AI copied more than 12 million Getty photos without permission to train Stable Diffusion. Getty voluntarily dismissed its Delaware case in August 2025 and refiled in the Northern District of California.",
+    "parties": [
+      {
+        "name": "Getty Images (US), Inc.",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Stability AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.courtlistener.com/docket/66788385/getty-images-us-inc-v-stability-ai-inc/",
+        "label": "CourtListener (Del. docket)"
+      },
+      {
+        "url": "https://news.bloomberglaw.com/ip-law/getty-drops-stability-ai-copyright-suit-refiles-in-california",
+        "label": "Bloomberg Law (refiling)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-02-03",
+        "event": "Getty files copyright/trademark suit against Stability AI in D. Del.",
+        "status": "sued"
+      },
+      {
+        "date": "2025-08-14",
+        "event": "Getty voluntarily dismisses the Delaware case and refiles in N.D. Cal.",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "getty-v-stability-ai-uk",
+    "title": "Getty Images v. Stability AI (UK High Court)",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "UK",
+    "filingDate": "2023-01-16",
+    "status": "judgment",
+    "summary": "In the UK's first major generative-AI copyright trial, the High Court on 4 November 2025 largely ruled for Stability AI after Getty dropped its primary training-copyright and database claims, finding only limited trademark infringement from watermark generation. Getty was later granted permission to appeal the secondary-infringement ruling.",
+    "parties": [
+      {
+        "name": "Getty Images",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Stability AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.judiciary.uk/wp-content/uploads/2025/11/Getty-Images-v-Stability-AI.pdf",
+        "label": "UK Judiciary judgment PDF"
+      },
+      {
+        "url": "https://newsroom.gettyimages.com/en/getty-images/getty-images-issues-statement-on-ruling-in-stability-ai-uk-litigation",
+        "label": "Getty Images statement"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-11-04",
+        "event": "High Court judgment: primary copyright/database claims dropped; limited trademark infringement found",
+        "status": "judgment"
+      },
+      {
+        "date": "2025-12-01",
+        "event": "Getty granted permission to appeal dismissal of its secondary copyright infringement claim",
+        "status": "appealed"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "andersen-v-stability-ai",
+    "title": "Andersen et al. v. Stability AI Ltd. et al.",
+    "actionType": "class_action",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-N.D.Cal.",
+    "filingDate": "2023-01-13",
+    "status": "pending",
+    "summary": "Visual artists brought a proposed class action alleging Stability AI, Midjourney and DeviantArt trained image generators on billions of scraped copyrighted images. DMCA claims were dismissed with prejudice, but copyright, trademark and inducement claims proceed through discovery.",
+    "parties": [
+      {
+        "name": "Sarah Andersen and other visual artists",
+        "category": "visual_artists",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Stability AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Midjourney",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "DeviantArt",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.courtlistener.com/docket/66732129/andersen-v-stability-ai-ltd/",
+        "label": "CourtListener docket"
+      },
+      {
+        "url": "https://copyrightalliance.org/andersen-v-stability-ai-copyright-case/",
+        "label": "Copyright Alliance"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-01-13",
+        "event": "Visual artists file proposed class action against Stability AI, Midjourney and DeviantArt",
+        "status": "sued"
+      },
+      {
+        "date": "2024-08-12",
+        "event": "Judge Orrick dismisses DMCA claims with prejudice but lets copyright/trademark/inducement claims proceed",
+        "status": "pending"
+      },
+      {
+        "date": "2026-02-27",
+        "event": "Third amended complaint filed; case in discovery with trial scheduled for Sept. 2026",
+        "status": "pending"
+      }
+    ],
+    "confidence": "medium",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "needs_review"
+  },
+  {
+    "id": "disney-universal-warner-v-midjourney",
+    "title": "Disney, Universal & Warner Bros. Discovery v. Midjourney, Inc. (consolidated)",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "US-C.D.Cal.",
+    "filingDate": "2025-06-11",
+    "status": "pending",
+    "summary": "Major film studios sued AI image generator Midjourney for input- and output-level copyright infringement, alleging it trained on and reproduces iconic copyrighted characters (e.g., Star Wars, Minions, Superman, Scooby-Doo). Disney/Universal filed in June 2025 and Warner Bros. Discovery in September 2025; the cases were consolidated.",
+    "parties": [
+      {
+        "name": "Disney Enterprises, Inc.",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Universal City Studios / NBCUniversal",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Warner Bros. Entertainment Inc. (Warner Bros. Discovery)",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Midjourney",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cnn.com/2025/06/11/tech/disney-universal-midjourney-ai-copyright-lawsuit",
+        "label": "CNN Business"
+      },
+      {
+        "url": "https://variety.com/2025/film/news/warner-bros-midjourney-lawsuit-ai-copyright-1236508618/",
+        "label": "Variety (Warner Bros suit)"
+      },
+      {
+        "url": "https://www.courtlistener.com/docket/71271014/warner-bros-entertainment-inc-v-midjourney-inc/",
+        "label": "CourtListener (WBD docket)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-06-11",
+        "event": "Disney and Universal file suit against Midjourney (C.D. Cal.)",
+        "status": "sued"
+      },
+      {
+        "date": "2025-08-01",
+        "event": "Midjourney answers asserting fair use",
+        "status": "pending"
+      },
+      {
+        "date": "2025-09-04",
+        "event": "Warner Bros. Discovery files its own infringement suit against Midjourney",
+        "status": "sued"
+      },
+      {
+        "date": "2025-10-01",
+        "event": "Cases consolidated for pretrial proceedings",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "gema-v-openai-munich",
+    "title": "GEMA v. OpenAI (Munich Regional Court I)",
+    "actionType": "lawsuit",
+    "caseType": "copyright_training_data",
+    "jurisdiction": "EU",
+    "filingDate": "2024-11-01",
+    "status": "judgment",
+    "summary": "German music-rights society GEMA sued OpenAI alleging ChatGPT was trained on and reproduces protected German song lyrics without a license. In November 2025 the Munich Regional Court largely upheld GEMA's claims, finding that 'memorization' of training data constitutes an infringing reproduction outside the EU text-and-data-mining exception; OpenAI announced it would appeal.",
+    "parties": [
+      {
+        "name": "GEMA (German music collecting society)",
+        "category": "musicians",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.twobirds.com/en/insights/2025/landmark-ruling-of-the-munich-regional-court-(gema-v-openai)-on-copyright-and-ai-training",
+        "label": "Bird & Bird analysis"
+      },
+      {
+        "url": "https://cms.law/en/deu/legal-updates/gema-vs.-openai-munich-regional-court-i-issues-landmark-copyright-decision",
+        "label": "CMS Law"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-11-01",
+        "event": "GEMA files suit against OpenAI in Munich over song lyrics",
+        "status": "sued"
+      },
+      {
+        "date": "2025-11-11",
+        "event": "Munich Regional Court largely upholds GEMA's claims for injunction, disclosure and damages",
+        "status": "judgment"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "reddit-v-anthropic-2025",
+    "title": "Reddit, Inc. v. Anthropic, PBC",
+    "actionType": "licensing_dispute",
+    "caseType": "licensing_contract",
+    "jurisdiction": "US-CA (San Francisco Superior Court)",
+    "filingDate": "2025-06-04",
+    "status": "pending",
+    "summary": "Reddit sued Anthropic for scraping Reddit content to train Claude without a license, asserting breach of contract, unjust enrichment, trespass and unfair competition rather than copyright. After Anthropic removed the case, a federal judge held the state claims were not preempted by the Copyright Act and remanded to state court in 2026.",
+    "parties": [
+      {
+        "name": "Reddit, Inc.",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Anthropic",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.courtlistener.com/docket/70704683/reddit-inc-v-anthropic-pbc/",
+        "label": "CourtListener docket 3:25-cv-05643"
+      },
+      {
+        "url": "https://www.courthousenews.com/reddit-privacy-case-against-anthropic-kicked-back-to-state-court/",
+        "label": "Courthouse News (remand)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-06-04",
+        "event": "Reddit files breach-of-contract/unfair-competition suit in San Francisco Superior Court",
+        "status": "sued"
+      },
+      {
+        "date": "2026-03-30",
+        "event": "N.D. Cal. holds claims not preempted by Copyright Act and remands to state court",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "reddit-v-perplexity-serpapi-2025",
+    "title": "Reddit, Inc. v. SerpApi, Oxylabs, AWMProxy & Perplexity AI, Inc.",
+    "actionType": "licensing_dispute",
+    "caseType": "licensing_contract",
+    "jurisdiction": "US-SDNY",
+    "filingDate": "2025-10-22",
+    "status": "pending",
+    "summary": "Reddit sued Perplexity and three scraping/proxy intermediaries alleging an 'industrial-scale' operation to harvest Reddit content from Google results and circumvent access controls, asserting DMCA anti-circumvention violations, unfair competition and unjust enrichment. Reddit claims Perplexity bought the laundered data to power its AI answer engine.",
+    "parties": [
+      {
+        "name": "Reddit, Inc.",
+        "category": "media",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Perplexity",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "SerpApi LLC, Oxylabs UAB, AWMProxy",
+        "category": "other",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.courtlistener.com/docket/71720563/reddit-inc-v-serpapi-llc/",
+        "label": "CourtListener docket 1:25-cv-08736"
+      },
+      {
+        "url": "https://www.bloomberg.com/news/articles/2025-10-22/reddit-sues-perplexity-others-over-alleged-data-scraping",
+        "label": "Bloomberg"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-10-22",
+        "event": "Reddit files suit in SDNY alleging DMCA circumvention and unfair competition over scraped data",
+        "status": "sued"
+      },
+      {
+        "date": "2026-02-06",
+        "event": "Reddit files first amended complaint against the scraping intermediaries and Perplexity",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "fastcase-v-alexi-2025",
+    "title": "Fastcase, Inc. v. Alexi Technologies",
+    "actionType": "licensing_dispute",
+    "caseType": "licensing_contract",
+    "jurisdiction": "US-D.D.C.",
+    "filingDate": "2025-11-26",
+    "status": "pending",
+    "summary": "Legal-research publisher Fastcase (owned by Clio/vLex) sued AI legal startup Alexi for breach of a 2021 license that granted case-law database access for 'internal research' only, alleging Alexi used the data commercially to generate AI legal memos, plus trademark and trade-secret claims. Alexi counterclaimed, calling it anticompetitive sham litigation.",
+    "parties": [
+      {
+        "name": "Fastcase, Inc. (Clio/vLex)",
+        "category": "publishers",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Alexi Technologies, Inc.",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.lawnext.com/2025/12/fastcase-files-lawsuit-against-alexi-over-alleged-data-misuse-and-trademark-infringement.html",
+        "label": "LawSites (filing)"
+      },
+      {
+        "url": "https://www.lawnext.com/2026/01/alexi-fires-back-at-fastcase-lawsuit-with-counterclaims-alleging-anticompetitive-conduct-following-clios-1b-acquisition.html",
+        "label": "LawSites (counterclaims)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-11-26",
+        "event": "Fastcase files breach-of-license, trademark and trade-secret suit against Alexi in D.D.C.",
+        "status": "sued"
+      },
+      {
+        "date": "2026-01-01",
+        "event": "Alexi answers and files counterclaims against Fastcase, vLex and Clio",
+        "status": "pending"
+      }
+    ],
+    "confidence": "medium",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "needs_review"
+  },
+  {
+    "id": "musk-v-openai-altman",
+    "title": "Musk v. Altman (Musk v. OpenAI)",
+    "actionType": "lawsuit",
+    "caseType": "antitrust_competition",
+    "jurisdiction": "US-N.D.Cal.",
+    "filingDate": "2024-08-05",
+    "status": "judgment",
+    "summary": "Elon Musk sued OpenAI and Sam Altman alleging the nonprofit-to-for-profit conversion breached OpenAI's founding agreement, adding antitrust/unfair-competition claims about the Microsoft partnership. A jury found for OpenAI in May 2026, holding Musk's claims time-barred.",
+    "parties": [
+      {
+        "name": "Elon Musk / xAI",
+        "category": "ai_company",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Sam Altman",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Musk_v._Altman",
+        "label": "Wikipedia case overview"
+      },
+      {
+        "url": "https://www.aljazeera.com/news/2026/5/18/elon-musk-loses-lawsuit-against-openai",
+        "label": "Al Jazeera: jury verdict May 2026"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-08-05",
+        "event": "Musk refiles suit in federal court (N.D. Cal.) after withdrawing state case",
+        "status": "sued"
+      },
+      {
+        "date": "2025-04-01",
+        "event": "Court lets antitrust and core contract claims proceed toward trial",
+        "status": "pending"
+      },
+      {
+        "date": "2026-05-18",
+        "event": "Jury finds for OpenAI/Altman; claims held barred by statute of limitations",
+        "status": "judgment"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "ftc-6b-ai-partnerships-report",
+    "title": "FTC Section 6(b) Staff Report on AI Partnerships & Investments",
+    "actionType": "investigation",
+    "caseType": "antitrust_competition",
+    "jurisdiction": "US-FTC",
+    "filingDate": "2025-01-17",
+    "status": "investigation",
+    "summary": "FTC staff report examining cloud-AI partnerships (Microsoft-OpenAI, Amazon-Anthropic, Google-Anthropic) flagged potential competition concerns around compute access, exclusivity, control rights, and switching costs.",
+    "parties": [
+      {
+        "name": "Federal Trade Commission",
+        "category": "regulators",
+        "role": "investigator",
+        "side": "initiating"
+      },
+      {
+        "name": "Microsoft",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      },
+      {
+        "name": "Amazon",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-issues-staff-report-ai-partnerships-investments-study",
+        "label": "FTC press release"
+      },
+      {
+        "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/p246201_aipartnerships6breport_redacted_0.pdf",
+        "label": "FTC 6(b) staff report (PDF)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-01-25",
+        "event": "FTC issues 6(b) orders to Alphabet, Amazon, Microsoft, OpenAI, Anthropic",
+        "status": "investigation"
+      },
+      {
+        "date": "2025-01-17",
+        "event": "FTC releases staff report detailing competition concerns",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "us-v-google-search-remedies-ai",
+    "title": "United States v. Google (Search) - Remedies Ruling",
+    "actionType": "regulatory_action",
+    "caseType": "antitrust_competition",
+    "jurisdiction": "US-D.D.C.",
+    "filingDate": "2025-09-02",
+    "status": "appealed",
+    "summary": "After finding Google an illegal monopolist in search, the court's September 2025 remedies ruling barred exclusive distribution deals and extended relief to Google's GenAI products (Gemini app, Assistant), requiring some search-index/data sharing, while declining to force divestiture of Chrome.",
+    "parties": [
+      {
+        "name": "U.S. Department of Justice & States",
+        "category": "governments",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Google/Alphabet",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling",
+        "label": "NPR: remedies ruling"
+      },
+      {
+        "url": "https://www.congress.gov/crs-product/LSB11362",
+        "label": "CRS Legal Sidebar"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-08-05",
+        "event": "Court finds Google unlawfully monopolized general search",
+        "status": "judgment"
+      },
+      {
+        "date": "2025-09-02",
+        "event": "Remedies ruling imposes behavioral remedies extending to AI products",
+        "status": "judgment"
+      },
+      {
+        "date": "2025-09-15",
+        "event": "Google signals appeal of remedies",
+        "status": "appealed"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "doj-nvidia-antitrust-investigation",
+    "title": "DOJ Antitrust Investigation of Nvidia (AI chips)",
+    "actionType": "investigation",
+    "caseType": "antitrust_competition",
+    "jurisdiction": "US-DOJ",
+    "filingDate": "2024-09-01",
+    "status": "investigation",
+    "summary": "The DOJ Antitrust Division is investigating whether Nvidia uses exclusionary practices in the AI accelerator market - bundling, penalizing customers who use rival chips, and limiting interoperability with its CUDA platform - with continued Congressional scrutiny into 2025.",
+    "parties": [
+      {
+        "name": "U.S. Department of Justice",
+        "category": "governments",
+        "role": "investigator",
+        "side": "initiating"
+      },
+      {
+        "name": "Nvidia",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.lexology.com/library/detail.aspx?g=a354169c-67e4-4cdb-bcb9-628ef55860b2",
+        "label": "Lexology: DOJ Nvidia probe"
+      },
+      {
+        "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-blumenthal-question-whether-nvidias-20-billion-groq-deal-is-attempt-to-avoid-antitrust-laws/",
+        "label": "Senate: Warren/Blumenthal Groq letter"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-09-01",
+        "event": "DOJ issues subpoenas to Nvidia and third parties over exclusionary-conduct concerns",
+        "status": "investigation"
+      },
+      {
+        "date": "2025-01-01",
+        "event": "Senators question Nvidia's $20B Groq-related deal as possible antitrust workaround",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "medium",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "needs_review"
+  },
+  {
+    "id": "cma-microsoft-openai-merger-inquiry",
+    "title": "UK CMA Microsoft/OpenAI Partnership Merger Inquiry",
+    "actionType": "investigation",
+    "caseType": "antitrust_competition",
+    "jurisdiction": "UK",
+    "filingDate": "2025-03-05",
+    "status": "dismissed",
+    "summary": "The UK Competition and Markets Authority closed its inquiry into the Microsoft-OpenAI partnership in March 2025, concluding Microsoft does not exert the level of control that would make the partnership a reviewable merger.",
+    "parties": [
+      {
+        "name": "UK Competition and Markets Authority",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Microsoft",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.gov.uk/cma-cases/microsoft-slash-openai-partnership-merger-inquiry",
+        "label": "GOV.UK CMA case page"
+      },
+      {
+        "url": "https://techcrunch.com/2025/03/05/u-k-s-competition-authority-says-microsofts-openai-partnership-doesnt-quality-for-investigation/",
+        "label": "TechCrunch: inquiry closed"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-12-01",
+        "event": "CMA opens phase to assess whether the partnership is a relevant merger",
+        "status": "investigation"
+      },
+      {
+        "date": "2025-03-05",
+        "event": "CMA finds partnership does not qualify for review; inquiry closed",
+        "status": "dismissed"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "xai-v-apple-openai-antitrust",
+    "title": "xAI / X Corp. v. Apple & OpenAI",
+    "actionType": "lawsuit",
+    "caseType": "antitrust_competition",
+    "jurisdiction": "US-N.D.Tex.",
+    "filingDate": "2025-08-25",
+    "status": "pending",
+    "summary": "Elon Musk's xAI and X Corp. sued Apple and OpenAI alleging an anticompetitive scheme in which Apple's ChatGPT integration and App Store rankings favor OpenAI and disadvantage rivals like Grok and X; plaintiffs seek injunctions and treble damages.",
+    "parties": [
+      {
+        "name": "xAI Corp. / X Corp.",
+        "category": "ai_company",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Apple Inc.",
+        "category": "other",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cnbc.com/2025/08/25/musk-lawsuit-apple-openai-monopoly.html",
+        "label": "CNBC: xAI sues Apple/OpenAI"
+      },
+      {
+        "url": "https://appleinsider.com/articles/26/02/03/xai-accused-of-destroying-evidence-in-openai-apple-antitrust-lawsuit",
+        "label": "AppleInsider: 2026 evidence dispute"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-08-25",
+        "event": "xAI/X file antitrust suit in N.D. Texas",
+        "status": "sued"
+      },
+      {
+        "date": "2026-02-03",
+        "event": "xAI accused of spoliation/destroying evidence in the litigation",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "mobley-v-workday",
+    "title": "Mobley v. Workday, Inc.",
+    "actionType": "class_action",
+    "caseType": "employment_labor",
+    "jurisdiction": "US-N.D.Cal.",
+    "filingDate": "2023-02-21",
+    "status": "pending",
+    "summary": "A putative nationwide collective/class action alleging Workday's AI-based applicant-screening tools cause disparate-impact discrimination based on age, race, and disability; the court granted preliminary ADEA collective certification in May 2025.",
+    "parties": [
+      {
+        "name": "Derek Mobley (and ADEA collective)",
+        "category": "class_action",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Workday",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://clearinghouse.net/case/44074/",
+        "label": "Civil Rights Litigation Clearinghouse"
+      },
+      {
+        "url": "https://www.insidetechlaw.com/blog/2025/06/workday-ai-lawsuit-receives-the-greenlight-to-proceed-as-a-class-action",
+        "label": "Norton Rose Fulbright: collective certification"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-02-21",
+        "event": "Complaint filed in N.D. Cal.",
+        "status": "sued"
+      },
+      {
+        "date": "2025-05-16",
+        "event": "Court grants preliminary ADEA collective certification (applicants 40+)",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "sag-aftra-video-game-strike-ai",
+    "title": "SAG-AFTRA Video Game Strike / 2025 Interactive Media Agreement (AI terms)",
+    "actionType": "other",
+    "caseType": "employment_labor",
+    "jurisdiction": "US",
+    "filingDate": "2024-07-26",
+    "status": "settled",
+    "summary": "SAG-AFTRA struck major video game companies primarily over AI digital-replica protections; a new Interactive Media Agreement ratified in 2025 added AI consent/disclosure requirements and strike-time protections for performers' replicas.",
+    "parties": [
+      {
+        "name": "SAG-AFTRA",
+        "category": "other",
+        "role": "complainant",
+        "side": "initiating"
+      },
+      {
+        "name": "Video game companies (bargaining group)",
+        "category": "other",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/2024%E2%80%932025_SAG-AFTRA_video_game_strike",
+        "label": "Wikipedia: video game strike"
+      },
+      {
+        "url": "https://www.sagaftra.org/contracts-industry-resources/interactive/2025-interactive-media-video-game-agreement",
+        "label": "SAG-AFTRA: 2025 agreement"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-07-26",
+        "event": "Strike begins over AI and other terms",
+        "status": "pending"
+      },
+      {
+        "date": "2025-07-01",
+        "event": "Members ratify new agreement with AI consent/disclosure terms",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "sag-aftra-fortnite-darth-vader-ulp",
+    "title": "SAG-AFTRA ULP Charge over AI Darth Vader Voice in Fortnite",
+    "actionType": "other",
+    "caseType": "employment_labor",
+    "jurisdiction": "US-NLRB",
+    "filingDate": "2025-05-19",
+    "status": "pending",
+    "summary": "SAG-AFTRA filed an unfair labor practice charge against Llama Productions (an Epic Games subsidiary) alleging it unilaterally deployed an AI-generated Darth Vader voice in Fortnite, replacing union-covered work without bargaining.",
+    "parties": [
+      {
+        "name": "SAG-AFTRA",
+        "category": "other",
+        "role": "complainant",
+        "side": "initiating"
+      },
+      {
+        "name": "Llama Productions LLC / Epic Games",
+        "category": "other",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.sagaftra.org/sag-aftra-statement-fortnites-use-ai-darth-vader-voice-and-ulp-filing",
+        "label": "SAG-AFTRA statement"
+      },
+      {
+        "url": "https://variety.com/2025/gaming/news/sag-aftra-fortnite-ai-darth-vader-unfair-labor-practices-james-earl-jones-1236403553/",
+        "label": "Variety: ULP charge"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-05-19",
+        "event": "SAG-AFTRA files ULP charge over AI-generated voice use",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "aclu-hirevue-intuit-eeoc-complaint",
+    "title": "ACLU Complaint v. Intuit & HireVue (AI Interview Bias)",
+    "actionType": "regulatory_action",
+    "caseType": "employment_labor",
+    "jurisdiction": "US-EEOC",
+    "filingDate": "2025-03-01",
+    "status": "pending",
+    "summary": "The ACLU and Public Justice filed EEOC and Colorado civil-rights complaints alleging HireVue's AI video-interview tool discriminated against a Deaf, Indigenous applicant at Intuit in violation of the ADA, Title VII, and Colorado law.",
+    "parties": [
+      {
+        "name": "D.K. (via ACLU / Public Justice)",
+        "category": "other",
+        "role": "complainant",
+        "side": "initiating"
+      },
+      {
+        "name": "HireVue",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      },
+      {
+        "name": "Intuit Inc.",
+        "category": "other",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.publicjustice.net/hirevue-intuit-artificial-intelligence-biased-hiring/",
+        "label": "Public Justice: complaint"
+      },
+      {
+        "url": "https://www.hrdive.com/news/ai-intuit-hirevue-deaf-indigenous-employee-discrimination-aclu/743273/",
+        "label": "HR Dive coverage"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-03-01",
+        "event": "Complaints filed with EEOC and Colorado Civil Rights Division",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "raine-v-openai",
+    "title": "Raine v. OpenAI",
+    "actionType": "lawsuit",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US-CA",
+    "filingDate": "2025-08-26",
+    "status": "pending",
+    "summary": "Parents of 16-year-old Adam Raine sued OpenAI and Sam Altman in San Francisco Superior Court for wrongful death and product liability, alleging ChatGPT (GPT-4o) fostered dependence and provided suicide encouragement and methods; OpenAI denies liability.",
+    "parties": [
+      {
+        "name": "Matthew and Maria Raine",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Sam Altman",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Raine_v._OpenAI",
+        "label": "Wikipedia case overview"
+      },
+      {
+        "url": "https://techcrunch.com/2025/11/26/openai-claims-teen-circumvented-safety-features-before-suicide-that-chatgpt-helped-plan/",
+        "label": "TechCrunch: OpenAI response"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-08-26",
+        "event": "Wrongful-death/product-liability suit filed against OpenAI and Altman",
+        "status": "sued"
+      },
+      {
+        "date": "2025-11-26",
+        "event": "OpenAI denies allegations, argues teen circumvented safety features",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "garcia-v-character-technologies",
+    "title": "Garcia v. Character Technologies, Inc.",
+    "actionType": "lawsuit",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US-M.D.Fla.",
+    "filingDate": "2024-10-22",
+    "status": "pending",
+    "summary": "Megan Garcia's wrongful-death product-liability suit alleges Character.AI's chatbot contributed to the suicide of her 14-year-old son Sewell Setzer III. In May 2025 the court treated the chatbot as a 'product' and let most claims proceed, rejecting a First Amendment defense.",
+    "parties": [
+      {
+        "name": "Megan Garcia",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Character.AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Google/Alphabet",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.courtlistener.com/docket/69300919/garcia-v-character-technologies-inc/",
+        "label": "CourtListener docket (6:24-cv-01903)"
+      },
+      {
+        "url": "https://www.transparencycoalition.ai/news/important-early-ruling-in-characterai-case-this-chatbot-is-a-product-not-speech",
+        "label": "Analysis of May 2025 ruling"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-10-22",
+        "event": "Complaint filed in M.D. Florida",
+        "status": "sued"
+      },
+      {
+        "date": "2025-05-21",
+        "event": "Court denies most of motion to dismiss; chatbot treated as product",
+        "status": "pending"
+      },
+      {
+        "date": "2026-01-07",
+        "event": "Mediated settlement disclosed in coordinated Character.AI cases",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "af-v-character-technologies-texas",
+    "title": "A.F. v. Character Technologies, Inc. (Texas)",
+    "actionType": "lawsuit",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US-E.D.Tex.",
+    "filingDate": "2024-12-09",
+    "status": "pending",
+    "summary": "Texas parents allege Character.AI exposed their minor children to sexualized and self-harm-encouraging content, bringing design-defect and failure-to-warn claims against Character Technologies, its founders, and Google.",
+    "parties": [
+      {
+        "name": "A.F. and other Texas parents",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Character.AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Google/Alphabet",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.afslaw.com/perspectives/ai-law-blog/new-lawsuits-targeting-personalized-ai-chatbots-highlight-need-ai-quality",
+        "label": "ArentFox Schiff: case analysis"
+      },
+      {
+        "url": "https://www.texasstandard.org/stories/character-ai-artificial-intelligence-lawsuit-texas-parents-self-harm-chatbot/",
+        "label": "Texas Standard coverage"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-12-09",
+        "event": "Suit filed in E.D. Texas (2:24-cv-01014)",
+        "status": "sued"
+      },
+      {
+        "date": "2026-01-07",
+        "event": "Included among Character.AI cases moving to mediated settlement",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "smvlc-chatgpt-suicide-lawsuits",
+    "title": "SMVLC/Tech Justice ChatGPT Suicide & Harm Lawsuits (Shamblin et al.)",
+    "actionType": "lawsuit",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US-CA",
+    "filingDate": "2025-11-06",
+    "status": "pending",
+    "summary": "The Social Media Victims Law Center and Tech Justice Law Project filed seven California suits against OpenAI and Sam Altman on behalf of families (including Zane Shamblin) alleging wrongful death, assisted suicide, and product-liability claims tied to GPT-4o's sycophantic behavior.",
+    "parties": [
+      {
+        "name": "Shamblin and other families (via SMVLC)",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Sam Altman",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://socialmediavictims.org/press-releases/smvlc-tech-justice-law-project-lawsuits-accuse-chatgpt-of-emotional-manipulation-supercharging-ai-delusions-and-acting-as-a-suicide-coach/",
+        "label": "SMVLC press release"
+      },
+      {
+        "url": "https://www.cnn.com/2025/11/06/us/openai-chatgpt-suicide-lawsuit-invs-vis",
+        "label": "CNN coverage"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-11-06",
+        "event": "Seven suits filed in California state courts against OpenAI and Altman",
+        "status": "sued"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "ftc-6b-ai-companion-chatbots",
+    "title": "FTC 6(b) Inquiry into AI Companion Chatbots (Child/Teen Safety)",
+    "actionType": "investigation",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US-FTC",
+    "filingDate": "2025-09-11",
+    "status": "investigation",
+    "summary": "The FTC issued compulsory 6(b) orders to seven companies operating consumer AI companion chatbots, seeking information on how they test, monitor, and mitigate harms to children and teens, including sexualized interactions and self-harm content.",
+    "parties": [
+      {
+        "name": "Federal Trade Commission",
+        "category": "regulators",
+        "role": "investigator",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      },
+      {
+        "name": "Character.AI",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      },
+      {
+        "name": "Meta",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions",
+        "label": "FTC press release"
+      },
+      {
+        "url": "https://www.cnn.com/2025/09/11/tech/ftc-investigating-ai-companion-chatbots-kids-safety",
+        "label": "CNN coverage"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-09-11",
+        "event": "FTC issues 6(b) orders to seven AI companion chatbot companies",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "character-ai-google-teen-harm-settlement",
+    "title": "Character.AI / Google Settlements in Teen Chatbot-Harm Cases",
+    "actionType": "settlement",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US",
+    "filingDate": "2026-01-07",
+    "status": "settled",
+    "summary": "In court filings unsealed January 7, 2026, Character Technologies and Google disclosed mediated settlements in multiple teen chatbot-harm cases (filed in Florida, Colorado, New York, and Texas) - the first major settlements of AI chatbot wrongful-death/harm suits.",
+    "parties": [
+      {
+        "name": "Plaintiff families (FL, CO, NY, TX)",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Character.AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Google/Alphabet",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/01/07/google-and-character-ai-negotiate-first-major-settlements-in-teen-chatbot-death-cases/",
+        "label": "TechCrunch: settlements"
+      },
+      {
+        "url": "https://news.bloomberglaw.com/litigation/character-ai-google-agree-to-settle-teen-chatbot-harm-lawsuits",
+        "label": "Bloomberg Law"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-01-07",
+        "event": "Filings reveal mediated settlements in five coordinated cases",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "kentucky-ag-v-character-technologies",
+    "title": "Kentucky v. Character Technologies (AG Enforcement Suit)",
+    "actionType": "regulatory_action",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US-KY",
+    "filingDate": "2026-01-08",
+    "status": "enforcement_action",
+    "summary": "Kentucky AG Russell Coleman filed the first state enforcement lawsuit against Character.AI, alleging its chatbot preyed on children - encouraging self-harm and exposing minors to sexual content - in violation of Kentucky consumer-protection and data-privacy laws.",
+    "parties": [
+      {
+        "name": "Kentucky Attorney General Russell Coleman",
+        "category": "governments",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Character.AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://news.bloomberglaw.com/legal-exchange-insights-and-commentary/kentucky-lawsuit-offers-blueprint-for-states-to-sue-ai-chatbots",
+        "label": "Bloomberg Law analysis"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-01-08",
+        "event": "Kentucky AG files enforcement suit against Character.AI",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "peralta-v-character-technologies",
+    "title": "Peralta v. Character Technologies (Colorado)",
+    "actionType": "lawsuit",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US-CO",
+    "filingDate": "2025-09-16",
+    "status": "pending",
+    "summary": "The family of 13-year-old Juliana Peralta sued Character Technologies, its founders, and Alphabet, alleging a Character.AI companion bot fostered dependency, engaged in explicit role-play, and failed to intervene amid her suicidal statements before her death.",
+    "parties": [
+      {
+        "name": "Peralta family",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Character.AI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      },
+      {
+        "name": "Google/Alphabet",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cnn.com/2025/09/16/tech/character-ai-developer-lawsuit-teens-suicide-and-suicide-attempt",
+        "label": "CNN coverage"
+      },
+      {
+        "url": "https://www.cbsnews.com/colorado/news/lawsuit-characterai-chatbot-colorado-suicide/",
+        "label": "CBS Colorado coverage"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-09-16",
+        "event": "Wrongful-death suit filed against Character.AI and Alphabet",
+        "status": "sued"
+      },
+      {
+        "date": "2026-01-07",
+        "event": "Included in mediated Character.AI settlements disclosure",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "44-state-ags-ai-child-safety-letter",
+    "title": "44 State Attorneys General Warning Letter to AI Companies",
+    "actionType": "regulatory_action",
+    "caseType": "ai_safety_harms",
+    "jurisdiction": "US",
+    "filingDate": "2025-08-25",
+    "status": "investigation",
+    "summary": "A bipartisan coalition of 44 state attorneys general (led by Tennessee AG Skrmetti) sent a formal letter to major AI companies warning that they will 'answer for it' if their chatbots knowingly harm children, citing sexualized and manipulative interactions with minors.",
+    "parties": [
+      {
+        "name": "44 State Attorneys General (NAAG coalition)",
+        "category": "governments",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Meta",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.naag.org/press-releases/bipartisan-coalition-of-state-attorneys-general-issues-letter-to-ai-industry-leaders-on-child-safety/",
+        "label": "NAAG press release"
+      },
+      {
+        "url": "https://www.tn.gov/attorneygeneral/news/2025/8/25/pr25-43.html",
+        "label": "Tennessee AG press release"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-08-25",
+        "event": "Coalition sends child-safety warning letter to AI CEOs",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "walters-v-openai-defamation",
+    "title": "Walters v. OpenAI (ChatGPT defamation)",
+    "actionType": "lawsuit",
+    "caseType": "defamation_misinformation",
+    "jurisdiction": "US-GA",
+    "filingDate": "2023-06-05",
+    "status": "dismissed",
+    "summary": "Radio host Mark Walters sued OpenAI after ChatGPT falsely stated he had embezzled from a gun-rights group. A Georgia court granted OpenAI summary judgment in May 2025, finding no defamatory meaning, no actual malice, and no damages.",
+    "parties": [
+      {
+        "name": "Mark Walters",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://blog.ericgoldman.org/archives/2025/05/chatgpt-defeats-defamation-lawsuit-over-hallucination-walters-v-openai.htm",
+        "label": "Eric Goldman Tech & Marketing Law Blog"
+      },
+      {
+        "url": "https://www.clearygottlieb.com/news-and-insights/publication-listing/georgia-court-dismisses-defamation-lawsuit-against-openai-over-chatgpt-output",
+        "label": "Cleary Gottlieb analysis"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-06-05",
+        "event": "Walters files defamation suit in Georgia state court",
+        "status": "sued"
+      },
+      {
+        "date": "2025-05-19",
+        "event": "Gwinnett County Superior Court grants OpenAI summary judgment, dismissing the claim",
+        "status": "dismissed"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "starbuck-v-meta-ai-defamation",
+    "title": "Starbuck v. Meta (AI chatbot defamation)",
+    "actionType": "lawsuit",
+    "caseType": "defamation_misinformation",
+    "jurisdiction": "US-DE",
+    "filingDate": "2025-04-01",
+    "status": "settled",
+    "summary": "Conservative activist Robby Starbuck sued Meta in Delaware, alleging its AI chatbot falsely tied him to the Jan. 6 riot and other false claims. The parties settled in August 2025, with Starbuck becoming an AI-bias advisor to Meta.",
+    "parties": [
+      {
+        "name": "Robby Starbuck",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Meta",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://reason.com/volokh/2025/08/08/ai-libel-suit-by-conservative-activist-robby-starbuck-against-meta-settles/",
+        "label": "Reason / Volokh Conspiracy"
+      },
+      {
+        "url": "https://thehill.com/policy/technology/5444067-meta-robby-starbuck-ai-lawsuit/",
+        "label": "The Hill"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-04-01",
+        "event": "Starbuck files defamation suit against Meta in Delaware Superior Court seeking ~$5M",
+        "status": "sued"
+      },
+      {
+        "date": "2025-08-08",
+        "event": "Settlement announced; Starbuck to advise Meta on AI political bias",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "starbuck-v-google-ai-defamation",
+    "title": "Starbuck v. Google (Bard/Gemini defamation)",
+    "actionType": "lawsuit",
+    "caseType": "defamation_misinformation",
+    "jurisdiction": "US-DE",
+    "filingDate": "2025-10-22",
+    "status": "pending",
+    "summary": "Robby Starbuck sued Google in Delaware, alleging its Bard/Gemini AI generated a false 'biography' portraying him as a sexual abuser and criminal, and fabricated news articles. He seeks at least $15M.",
+    "parties": [
+      {
+        "name": "Robert (Robby) Starbuck",
+        "category": "other",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Google/Alphabet",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://news.bloomberglaw.com/litigation/google-sued-by-robby-starbuck-over-false-ai-crafted-biography",
+        "label": "Bloomberg Law"
+      },
+      {
+        "url": "https://www.dhillonlaw.com/wp-content/uploads/2025/10/20251022_Stamped-Complaint-Summons-Praecipe-CIS.pdf",
+        "label": "Filed complaint (PDF)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-10-22",
+        "event": "Starbuck files defamation suit against Google in Delaware Superior Court",
+        "status": "sued"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "garante-deepseek-italy-ban",
+    "title": "Garante (Italy) v. DeepSeek - data processing ban",
+    "actionType": "regulatory_action",
+    "caseType": "privacy_data_protection",
+    "jurisdiction": "IT",
+    "filingDate": "2025-01-30",
+    "status": "enforcement_action",
+    "summary": "Italy's Garante ordered an immediate ban on DeepSeek's processing of Italian users' data after the Chinese AI firm failed to satisfactorily answer inquiries about what data it collects and whether it is stored in China.",
+    "parties": [
+      {
+        "name": "Garante per la protezione dei dati personali",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "DeepSeek",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://decrypt.co/303904/italy-bans-china-deepseek-ai-privacy-fears",
+        "label": "Decrypt"
+      },
+      {
+        "url": "https://www.euronews.com/next/2025/01/29/italian-data-privacy-agency-probes-chinas-deepseek-ai-as-eu-tests-gdpr-compliance",
+        "label": "Euronews"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-01-28",
+        "event": "Garante sends DeepSeek an information request",
+        "status": "investigation"
+      },
+      {
+        "date": "2025-01-30",
+        "event": "Garante orders immediate ban on processing Italian users' data",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "noyb-openai-holmen-norway",
+    "title": "noyb / Holmen v. OpenAI (Norway GDPR complaint)",
+    "actionType": "regulatory_action",
+    "caseType": "privacy_data_protection",
+    "jurisdiction": "NO",
+    "filingDate": "2025-03-20",
+    "status": "investigation",
+    "summary": "Privacy group noyb filed a GDPR complaint with Norway's Datatilsynet on behalf of Arve Hjalmar Holmen, after ChatGPT falsely claimed he had murdered his children, alleging violation of the GDPR data-accuracy principle.",
+    "parties": [
+      {
+        "name": "noyb / Arve Hjalmar Holmen",
+        "category": "other",
+        "role": "complainant",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://noyb.eu/en/chatgpt-provides-false-information-about-people-and-openai-cant-correct-it",
+        "label": "noyb press release"
+      },
+      {
+        "url": "https://techcrunch.com/2025/03/19/chatgpt-hit-with-privacy-complaint-over-defamatory-hallucinations/",
+        "label": "TechCrunch"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-03-20",
+        "event": "noyb files complaint with Norwegian DPA over defamatory ChatGPT hallucination",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "pipc-korea-deepseek",
+    "title": "PIPC (South Korea) v. DeepSeek - suspension & corrective order",
+    "actionType": "regulatory_action",
+    "caseType": "privacy_data_protection",
+    "jurisdiction": "KR",
+    "filingDate": "2025-02-17",
+    "status": "enforcement_action",
+    "summary": "South Korea's PIPC suspended new downloads of DeepSeek in February 2025 and, in April 2025, found the app had transferred Korean users' data to companies in China and the U.S. without consent, issuing corrective recommendations.",
+    "parties": [
+      {
+        "name": "Personal Information Protection Commission (PIPC)",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "DeepSeek",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cnbc.com/2025/04/24/south-korea-says-deepseek-transferred-user-data-to-china-us-without-consent.html",
+        "label": "CNBC"
+      },
+      {
+        "url": "https://iapp.org/news/a/south-korea-s-pipc-flexes-its-muscles-what-to-know-about-ai-model-deletion-cross-border-transfers-and-more",
+        "label": "IAPP"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-02-17",
+        "event": "PIPC orders temporary suspension of DeepSeek downloads",
+        "status": "enforcement_action"
+      },
+      {
+        "date": "2025-04-24",
+        "event": "PIPC publishes findings of unauthorized overseas data transfers and issues corrective recommendations",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "dpc-ireland-x-grok-training",
+    "title": "DPC (Ireland) inquiry into X/Grok AI training",
+    "actionType": "investigation",
+    "caseType": "privacy_data_protection",
+    "jurisdiction": "IE",
+    "filingDate": "2025-04-11",
+    "status": "investigation",
+    "summary": "Ireland's Data Protection Commission opened a statutory inquiry into X Internet Unlimited Company over the use of EU/EEA users' public posts to train the Grok generative AI models, examining lawfulness and transparency under the GDPR.",
+    "parties": [
+      {
+        "name": "Data Protection Commission (Ireland)",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "X Internet Unlimited Company (X / xAI, Grok)",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-announces-commencement-inquiry-x-internet-unlimited-company-xiuc",
+        "label": "DPC official announcement"
+      },
+      {
+        "url": "https://www.williamfry.com/knowledge/dpc-launches-investigation-into-xs-data-usage-for-ai-training/",
+        "label": "William Fry analysis"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-08-01",
+        "event": "Earlier DPC engagement; X commits to stop processing EU data to train Grok",
+        "status": "investigation"
+      },
+      {
+        "date": "2025-04-11",
+        "event": "DPC commences formal statutory inquiry into Grok AI training",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "dpc-ireland-x-grok-deepfakes",
+    "title": "DPC (Ireland) inquiry into X/Grok deepfake images",
+    "actionType": "investigation",
+    "caseType": "privacy_data_protection",
+    "jurisdiction": "IE",
+    "filingDate": "2026-02-17",
+    "status": "investigation",
+    "summary": "Ireland's DPC opened a large-scale statutory inquiry into X over allegations that its Grok AI generated non-consensual, sexualized 'nudified' deepfake images of real people, including minors, in breach of GDPR obligations.",
+    "parties": [
+      {
+        "name": "Data Protection Commission (Ireland)",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "X Internet Unlimited Company (X / xAI, Grok)",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.irishtimes.com/business/2026/02/17/dpc-investigates-x-over-potential-breaches-linked-to-nudification-of-images-via-grok/",
+        "label": "Irish Times"
+      },
+      {
+        "url": "https://www.jurist.org/news/2026/02/ireland-opens-investigation-into-xs-grok-images/",
+        "label": "JURIST"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-02-17",
+        "event": "DPC announces statutory inquiry into non-consensual sexualized deepfakes via Grok",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "noyb-meta-ai-training-eu",
+    "title": "noyb v. Meta - EU AI training on user data",
+    "actionType": "regulatory_action",
+    "caseType": "privacy_data_protection",
+    "jurisdiction": "EU",
+    "filingDate": "2025-05-14",
+    "status": "pending",
+    "summary": "Privacy group noyb sent Meta a cease-and-desist letter and threatened an EU-wide class action over Meta's plan to use EU Facebook/Instagram users' public and non-public data since 2007 to train AI on a 'legitimate interest' basis rather than opt-in consent.",
+    "parties": [
+      {
+        "name": "noyb (European Center for Digital Rights)",
+        "category": "other",
+        "role": "complainant",
+        "side": "initiating"
+      },
+      {
+        "name": "Meta",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://noyb.eu/en/noyb-sends-meta-cease-and-desist-letter-over-ai-training-european-class-action-potential-next-step",
+        "label": "noyb press release"
+      },
+      {
+        "url": "https://www.theregister.com/2025/05/14/metas_still_violating_gdpr_rules/",
+        "label": "The Register"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-05-14",
+        "event": "noyb issues cease-and-desist to Meta, threatening injunctions and class action",
+        "status": "pending"
+      },
+      {
+        "date": "2025-05-27",
+        "event": "Meta begins using EU user data for AI training",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "amazon-alexa-voice-privacy-class-action",
+    "title": "Alexa voice-recording privacy class action v. Amazon",
+    "actionType": "class_action",
+    "caseType": "privacy_data_protection",
+    "jurisdiction": "US-W.D.Wash.",
+    "filingDate": "2025-07-01",
+    "status": "pending",
+    "summary": "A federal judge certified a nationwide class action against Amazon alleging Alexa recorded and indefinitely stored billions of private conversations, including children's, and used the recordings to train its algorithms and AI systems.",
+    "parties": [
+      {
+        "name": "Alexa user class",
+        "category": "class_action",
+        "role": "plaintiff",
+        "side": "initiating"
+      },
+      {
+        "name": "Amazon",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://idtechwire.com/federal-judge-certifies-nationwide-alexa-privacy-class-action-against-amazon/",
+        "label": "IDTechWire"
+      },
+      {
+        "url": "https://topclassactions.com/lawsuit-settlements/lawsuit-news/amazon-alexa-users-win-class-certification-over-claims-their-voiceprint-data-was-illegally-collected/",
+        "label": "Top Class Actions"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-07-01",
+        "event": "Federal court certifies nationwide Alexa privacy class action",
+        "status": "pending"
+      }
+    ],
+    "confidence": "medium",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "needs_review"
+  },
+  {
+    "id": "texas-ag-meta-characterai-investigation",
+    "title": "Texas AG investigation of Meta AI & Character.AI",
+    "actionType": "investigation",
+    "caseType": "consumer_protection",
+    "jurisdiction": "US-TX",
+    "filingDate": "2025-08-18",
+    "status": "investigation",
+    "summary": "Texas AG Ken Paxton opened a consumer-protection investigation into Meta AI Studio and Character.AI, alleging they deceptively marketed AI chatbots as mental-health tools to children and misrepresented privacy, issuing civil investigative demands.",
+    "parties": [
+      {
+        "name": "Texas Attorney General (Ken Paxton)",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Meta",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      },
+      {
+        "name": "Character.AI",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-investigates-meta-and-characterai-misleading-children-deceptive-ai",
+        "label": "Texas AG press release"
+      },
+      {
+        "url": "https://techcrunch.com/2025/08/18/texas-attorney-general-accuses-meta-character-ai-of-misleading-kids-with-mental-health-claims/",
+        "label": "TechCrunch"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-08-18",
+        "event": "Texas AG announces investigation and issues civil investigative demands",
+        "status": "investigation"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "ftc-rytr-ai-reviews",
+    "title": "FTC v. Rytr (AI fake-review generator)",
+    "actionType": "settlement",
+    "caseType": "consumer_protection",
+    "jurisdiction": "US-FTC",
+    "filingDate": "2024-09-25",
+    "status": "settled",
+    "summary": "As part of 'Operation AI Comply,' the FTC charged Rytr with providing an AI tool that generated detailed, often false consumer reviews. Rytr agreed to a consent order in 2024, but in December 2025 the FTC reopened and set the order aside, citing the administration's AI Action Plan.",
+    "parties": [
+      {
+        "name": "Federal Trade Commission",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Rytr LLC",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+        "label": "FTC Operation AI Comply"
+      },
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/12/ftc-reopens-sets-aside-rytr-final-order-response-trump-administrations-ai-action-plan",
+        "label": "FTC reopens/sets aside order"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-09-25",
+        "event": "FTC announces action against Rytr; proposed consent order",
+        "status": "settled"
+      },
+      {
+        "date": "2025-12-01",
+        "event": "FTC reopens and sets aside the Rytr final order",
+        "status": "needs_review"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "ftc-workado-ai-detector",
+    "title": "FTC v. Workado (AI content-detector accuracy claims)",
+    "actionType": "settlement",
+    "caseType": "consumer_protection",
+    "jurisdiction": "US-FTC",
+    "filingDate": "2025-04-08",
+    "status": "settled",
+    "summary": "The FTC charged Workado (f/k/a Content at Scale AI) with falsely claiming its AI Content Detector was 98% accurate when independent testing showed ~53%. The FTC approved a final consent order in August 2025 barring unsupported effectiveness claims.",
+    "parties": [
+      {
+        "name": "Federal Trade Commission",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Workado, LLC (f/k/a Content at Scale AI)",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/04/ftc-order-requires-workado-back-artificial-intelligence-detection-claims",
+        "label": "FTC (proposed order)"
+      },
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/08/ftc-approves-final-order-against-workado-llc-which-misrepresented-accuracy-its-artificial",
+        "label": "FTC (final order)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-04-08",
+        "event": "FTC announces proposed consent order over inflated AI-detector accuracy claims",
+        "status": "enforcement_action"
+      },
+      {
+        "date": "2025-08-28",
+        "event": "FTC approves final consent order",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "ftc-cleo-ai-settlement",
+    "title": "FTC v. Cleo AI, Inc.",
+    "actionType": "settlement",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "US-FTC",
+    "filingDate": "2025-03-27",
+    "status": "settled",
+    "summary": "The FTC alleged AI-branded cash-advance app Cleo AI deceived consumers about how much money they could get and how fast, and made subscription cancellation difficult. Cleo agreed to a proposed order to pay $17 million and stop the misrepresentations.",
+    "parties": [
+      {
+        "name": "Federal Trade Commission",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Cleo AI, Inc.",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/03/cash-advance-company-cleo-ai-agrees-pay-17-million-result-ftc-lawsuit-charging-it-deceives-consumers",
+        "label": "FTC press release"
+      },
+      {
+        "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/cleo-ai-inc-ftc-v",
+        "label": "FTC case page"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-03-27",
+        "event": "FTC announces lawsuit and proposed $17M settlement order",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "ftc-donotpay-robot-lawyer-order",
+    "title": "In the Matter of DoNotPay ('robot lawyer')",
+    "actionType": "settlement",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "US-FTC",
+    "filingDate": "2025-02-11",
+    "status": "settled",
+    "summary": "Part of the FTC's 'Operation AI Comply,' the Commission alleged DoNotPay deceptively marketed an AI 'robot lawyer' it never tested against human-lawyer performance. The finalized order bars unsupported claims, requires $193,000 in monetary relief, and requires notice to 2021-2023 subscribers.",
+    "parties": [
+      {
+        "name": "Federal Trade Commission",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "DoNotPay, Inc.",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/02/ftc-finalizes-order-donotpay-prohibits-deceptive-ai-lawyer-claims-imposes-monetary-relief-requires",
+        "label": "FTC press release"
+      },
+      {
+        "url": "https://www.abajournal.com/news/article/robot-lawyer-website-donotpay-settles-ftc-claims-it-couldnt-deliver-on-promises",
+        "label": "ABA Journal"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-09-25",
+        "event": "FTC announces complaint as part of Operation AI Comply"
+      },
+      {
+        "date": "2025-02-11",
+        "event": "FTC finalizes order against DoNotPay",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "eu-commission-dsa-x-grok-proceedings",
+    "title": "European Commission DSA Proceedings against X over Grok",
+    "actionType": "investigation",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "EU",
+    "filingDate": "2026-01-26",
+    "status": "enforcement_action",
+    "summary": "The European Commission opened formal Digital Services Act proceedings against X to assess whether it properly assessed and mitigated systemic risks from deploying xAI's Grok chatbot in the EU, including the generation of non-consensual sexually explicit images and possible child sexual abuse material.",
+    "parties": [
+      {
+        "name": "European Commission",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "X (X Internet Unlimited Company) / xAI Grok",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_203",
+        "label": "European Commission press release IP/26/203"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-01-08",
+        "event": "Commission orders X to retain internal Grok-related records through end of 2026"
+      },
+      {
+        "date": "2026-01-26",
+        "event": "Commission opens formal DSA proceedings on Grok's deployment",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "eu-ai-act-implementation-enforcement",
+    "title": "EU AI Act Implementation: Prohibited Practices and GPAI Obligations",
+    "actionType": "regulatory_action",
+    "caseType": "other",
+    "jurisdiction": "EU",
+    "filingDate": "2025-02-02",
+    "status": "enforcement_action",
+    "summary": "The EU AI Act's Article 5 bans on 'unacceptable-risk' practices became applicable on 2 Feb 2025 (with Commission guidelines published 4 Feb), and obligations for providers of general-purpose AI models became applicable on 2 Aug 2025 alongside the AI Office's finalized GPAI Code of Practice.",
+    "parties": [
+      {
+        "name": "European Commission / AI Office",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "General-purpose AI model developers",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act",
+        "label": "EC guidelines on prohibited AI practices"
+      },
+      {
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+        "label": "GPAI Code of Practice"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-02-02",
+        "event": "Article 5 prohibited-practices provisions become applicable"
+      },
+      {
+        "date": "2025-07-10",
+        "event": "AI Office publishes final GPAI Code of Practice"
+      },
+      {
+        "date": "2025-08-02",
+        "event": "GPAI provider obligations become applicable",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "agcm-deepseek-consumer-probe",
+    "title": "Italy AGCM Consumer-Protection Probe into DeepSeek",
+    "actionType": "investigation",
+    "caseType": "government_investigation",
+    "jurisdiction": "IT",
+    "filingDate": "2025-06-01",
+    "status": "settled",
+    "summary": "Italy's competition/consumer authority (AGCM) investigated DeepSeek for failing to clearly warn users its AI could produce false or fabricated information ('hallucinations'). The probe closed in early 2026 after DeepSeek committed to prominent contextual warnings.",
+    "parties": [
+      {
+        "name": "Autorita Garante della Concorrenza e del Mercato (AGCM)",
+        "category": "regulators",
+        "role": "investigator",
+        "side": "initiating"
+      },
+      {
+        "name": "DeepSeek",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.rappler.com/technology/italy-closes-deepseek-probe-artificial-intelligence-hallucinations/",
+        "label": "Reuters via Rappler"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-06-01",
+        "event": "AGCM opens investigation into DeepSeek over hallucination warnings"
+      },
+      {
+        "date": "2026-01-05",
+        "event": "AGCM closes probe after DeepSeek commitments",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "garante-clothoff-deepfake-stop",
+    "title": "Italy Garante Emergency Stop of Deepfake App Clothoff",
+    "actionType": "regulatory_action",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "IT",
+    "filingDate": "2025-10-03",
+    "status": "enforcement_action",
+    "summary": "The Garante issued an emergency order restricting the operator of the generative-AI 'nudify' app Clothoff from processing Italian users' data, citing the creation of non-consensual deepfake nude images including of minors, no consent verification, and no labeling of AI-generated content.",
+    "parties": [
+      {
+        "name": "Garante per la protezione dei dati personali",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "AI/Robotics Venture Strategy 3 Ltd. (Clothoff)",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10174320",
+        "label": "Garante press release"
+      },
+      {
+        "url": "https://dig.watch/updates/italy-bans-deepfake-app-that-undresses-people",
+        "label": "Digital Watch Observatory"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-08-01",
+        "event": "Garante opens investigation into Clothoff"
+      },
+      {
+        "date": "2025-10-03",
+        "event": "Garante orders immediate stop to processing Italian users' data",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "cma-google-strategic-market-status",
+    "title": "UK CMA Designates Google with Strategic Market Status in Search (incl. AI features)",
+    "actionType": "regulatory_action",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "UK-CMA",
+    "filingDate": "2025-10-10",
+    "status": "enforcement_action",
+    "summary": "The UK Competition and Markets Authority designated Google as having Strategic Market Status in general search and search advertising. The designation expressly covers AI-based search features such as AI Overviews and AI Mode, enabling targeted conduct requirements.",
+    "parties": [
+      {
+        "name": "Competition and Markets Authority",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Google/Alphabet",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.gov.uk/government/news/cma-confirms-google-has-strategic-market-status-in-search-services",
+        "label": "CMA / GOV.UK"
+      },
+      {
+        "url": "https://www.gov.uk/cma-cases/googles-general-search-and-search-advertising-services",
+        "label": "CMA case page"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-01-14",
+        "event": "CMA launches Strategic Market Status investigation into Google search"
+      },
+      {
+        "date": "2025-10-10",
+        "event": "CMA issues final decision designating Google with Strategic Market Status",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "ca-de-ag-openai-restructuring-review",
+    "title": "California and Delaware AG Review of OpenAI Recapitalization",
+    "actionType": "regulatory_action",
+    "caseType": "government_investigation",
+    "jurisdiction": "US-CA",
+    "filingDate": "2025-10-28",
+    "status": "enforcement_action",
+    "summary": "The California and Delaware Attorneys General reviewed OpenAI's conversion of its for-profit arm into a public benefit corporation, issuing statements of non-objection conditioned on binding commitments including nonprofit control of the board and an independent safety committee able to halt model releases.",
+    "parties": [
+      {
+        "name": "California Attorney General (Rob Bonta)",
+        "category": "governments",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Delaware Attorney General (Kathy Jennings)",
+        "category": "governments",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "OpenAI",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://news.delaware.gov/2025/10/28/ag-jennings-completes-review-of-openai-recapitalization/",
+        "label": "Delaware AG"
+      },
+      {
+        "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-openai-harm-children-will-not-be-tolerated",
+        "label": "California AG (child-safety letter)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-09-05",
+        "event": "CA and DE AGs send OpenAI a child-safety warning letter"
+      },
+      {
+        "date": "2025-10-28",
+        "event": "Delaware AG issues Statement of No Objection to recapitalization",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "sec-presto-automation-ai-washing",
+    "title": "SEC v. Presto Automation ('AI washing')",
+    "actionType": "settlement",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "US-SEC",
+    "filingDate": "2025-01-14",
+    "status": "settled",
+    "summary": "In the SEC's first 'AI washing' action against a public company, it found restaurant-technology firm Presto Automation made materially misleading statements about its 'Presto Voice' AI drive-thru product, failing to disclose that the deployed speech-recognition technology was owned and operated by a third party.",
+    "parties": [
+      {
+        "name": "U.S. Securities and Exchange Commission",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Presto Automation Inc.",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.sec.gov/enforcement-litigation/administrative-proceedings/33-11352-s",
+        "label": "SEC administrative proceeding"
+      },
+      {
+        "url": "https://www.sec.gov/files/litigation/admin/2025/33-11352.pdf",
+        "label": "SEC order (PDF)"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-01-14",
+        "event": "SEC announces settled AI-washing charges against Presto Automation",
+        "status": "settled"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "doj-sec-nate-saniger-ai-fraud",
+    "title": "DOJ and SEC v. Albert Saniger (Nate, Inc. AI fraud)",
+    "actionType": "regulatory_action",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "US-DOJ",
+    "filingDate": "2025-04-09",
+    "status": "pending",
+    "summary": "The DOJ (SDNY) indicted Albert Saniger, former CEO of shopping app Nate, for securities and wire fraud, alleging he raised roughly $42 million by claiming Nate used proprietary AI to autonomously complete purchases when the work was actually done manually by contractors. The SEC filed a parallel civil action.",
+    "parties": [
+      {
+        "name": "U.S. Department of Justice (SDNY) and SEC",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "Albert Saniger (Nate, Inc.)",
+        "category": "ai_company",
+        "role": "defendant",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.justice.gov/usao-sdny/pr/tech-ceo-charged-artificial-intelligence-investment-fraud-scheme",
+        "label": "DOJ SDNY press release"
+      },
+      {
+        "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26282",
+        "label": "SEC litigation release"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-04-09",
+        "event": "DOJ unseals indictment; SEC files parallel civil charges",
+        "status": "pending"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "agcm-meta-whatsapp-ai-abuse-of-dominance",
+    "title": "Italy AGCM Abuse-of-Dominance Probe into Meta AI on WhatsApp (Case A576)",
+    "actionType": "investigation",
+    "caseType": "government_investigation",
+    "jurisdiction": "IT",
+    "filingDate": "2025-07-01",
+    "status": "enforcement_action",
+    "summary": "Italy's competition authority (AGCM) opened an Article 102 TFEU abuse-of-dominance investigation (Case A576) into Meta for giving Meta AI undue prominence within WhatsApp, and ordered Meta to suspend new WhatsApp Business terms that would have excluded rival AI chatbots.",
+    "parties": [
+      {
+        "name": "Autorita Garante della Concorrenza e del Mercato (AGCM)",
+        "category": "regulators",
+        "role": "investigator",
+        "side": "initiating"
+      },
+      {
+        "name": "Meta",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://en.agcm.it/en/media/press-releases/2025/12/A576",
+        "label": "AGCM case A576 page"
+      },
+      {
+        "url": "https://techcrunch.com/2025/12/24/italy-tells-meta-to-suspend-its-policy-that-bans-rival-ai-chatbots-from-whatsapp/",
+        "label": "TechCrunch"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-07-01",
+        "event": "AGCM opens abuse-of-dominance investigation into Meta AI on WhatsApp"
+      },
+      {
+        "date": "2025-12-24",
+        "event": "AGCM orders Meta to suspend terms excluding rival AI chatbots",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  },
+  {
+    "id": "berlin-dpa-deepseek-dsa-referral",
+    "title": "Berlin DPA Reports DeepSeek to Apple and Google under DSA Article 16",
+    "actionType": "regulatory_action",
+    "caseType": "regulatory_enforcement",
+    "jurisdiction": "DE",
+    "filingDate": "2025-06-27",
+    "status": "enforcement_action",
+    "summary": "The Berlin Data Protection Commissioner reported DeepSeek's apps to Apple and Google as 'unlawful content' under Article 16 of the Digital Services Act, alleging unlawful transfer of German users' personal data to China in breach of GDPR, after DeepSeek failed to meet a prior compliance demand.",
+    "parties": [
+      {
+        "name": "Berlin Commissioner for Data Protection (Meike Kamp)",
+        "category": "regulators",
+        "role": "regulator",
+        "side": "initiating"
+      },
+      {
+        "name": "DeepSeek",
+        "category": "ai_company",
+        "role": "respondent",
+        "side": "responding"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.datenschutz-berlin.de/pressemitteilung/berliner-datenschutzbeauftragte-meldet-ki-app-deepseek-in-deutschland-bei-apple-und-google-als-rechtswidrigen-inhalt/",
+        "label": "Berlin DPA press release"
+      },
+      {
+        "url": "https://techcrunch.com/2025/06/27/germany-tells-apple-google-to-remove-deepseek-from-the-countrys-app-stores/",
+        "label": "TechCrunch"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-05-06",
+        "event": "Berlin DPA demands DeepSeek bring processing into compliance or withdraw apps"
+      },
+      {
+        "date": "2025-06-27",
+        "event": "Berlin DPA reports DeepSeek apps to Apple and Google under DSA Article 16",
+        "status": "enforcement_action"
+      }
+    ],
+    "confidence": "high",
+    "lastVerified": "2026-07-01",
+    "firstSeen": "2026-07-01",
+    "lastUpdated": "2026-07-01",
+    "reviewStatus": "published"
+  }
+]
