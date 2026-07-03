@@ -52,6 +52,15 @@ export const caseSchema = z.object({
   court: z.string().nullish(),
   statutes: z.array(z.string()).optional(),
   legalTheories: z.array(z.string()).optional(),
+  // outcome / ripple effects — how the matter landed and how it was received
+  outcome: z
+    .object({
+      // effect on statutes, regulations, or other cases (precedent, citations…)
+      impact: z.array(z.string()).optional(),
+      // public / press / market sentiment
+      sentiment: z.array(z.string()).optional(),
+    })
+    .nullish(),
   // issue clusters (layer-1 anchors) — derived at load if absent
   issues: z.array(z.string()).optional(),
   // living-DB bookkeeping

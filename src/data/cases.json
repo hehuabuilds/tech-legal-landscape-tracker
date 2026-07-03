@@ -3724,7 +3724,19 @@
     "statutes": [],
     "legalTheories": [
       "charitable trust oversight"
-    ]
+    ],
+    "outcome": {
+      "impact": [
+        "Established that state AGs can use charitable-trust authority to condition an AI lab's corporate restructuring, setting a template other states may follow.",
+        "Binding memoranda require continued nonprofit control of OpenAI's board and an independent safety committee empowered to halt model releases.",
+        "Cited by commentators as precedent for AG oversight of other nonprofit-to-PBC conversions in the AI sector."
+      ],
+      "sentiment": [
+        "Child-safety advocates welcomed the enforceable commitments but argued the non-objection let the recapitalization proceed too readily.",
+        "Investors and OpenAI framed the outcome as regulatory clearance, easing uncertainty around the for-profit conversion.",
+        "Some governance critics viewed the 'statement of non-objection' as a soft touch that stopped short of blocking the deal."
+      ]
+    }
   },
   {
     "id": "sec-presto-automation-ai-washing",

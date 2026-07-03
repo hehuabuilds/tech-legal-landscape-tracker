@@ -20,6 +20,58 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Data scraper (auto-updates twice a week)
+
+The case dataset in [`src/data/cases.json`](src/data/cases.json) is refreshed by
+a low-cost automated scraper, [`scripts/scrape.ts`](scripts/scrape.ts):
+
+1. **Scrape public sources** with plain `fetch`/RSS/JSON — no LLM web search:
+   CourtListener's search API, and press-release feeds from the FTC, SEC, DOJ,
+   EU Commission, UK CMA, and California AG, plus Google News RSS for AI-legal
+   search terms.
+2. **Normalize + keyword-filter** each item to AI/tech-relevant candidates.
+3. **Deduplicate** against existing cases by URL and fuzzy title match.
+4. **Classify with Gemini** — only the *new* candidates are sent to Gemini
+   (`gemini-2.5-flash`), which judges relevance and structures the known facts
+   into our Zod `Case` schema. Gemini never discovers or invents cases; unsure
+   items are excluded.
+5. **Validate + append** — survivors are flagged `confidence: "low" | "medium"`
+   and `reviewStatus: "needs_review"` (so the UI badges them), capped at 8 per
+   run, with source URLs preserved. Existing curated data is never modified.
+
+A missing key, an unreachable source, or a quiet week all exit cleanly, so CI
+never fails.
+
+### Getting a Gemini API key
+
+1. Go to [Google AI Studio → API keys](https://aistudio.google.com/apikey).
+2. Sign in and click **Create API key** (the free tier is enough for this job).
+3. Copy the key (starts with `AIza…`).
+
+### Adding it to GitHub
+
+Repo **Settings → Secrets and variables → Actions → New repository secret**:
+
+- **Name:** `GEMINI_API_KEY`
+- **Value:** the key you copied
+
+Without this secret the scheduled job runs as a no-op (never fails).
+
+### Schedule & manual runs
+
+- **Twice weekly:** [`.github/workflows/scrape.yml`](.github/workflows/scrape.yml)
+  runs **Mondays and Thursdays at 06:00 UTC** and auto-commits new cases to
+  `main`.
+- **Run it manually:** GitHub → **Actions → “Scrape AI legal cases” → Run
+  workflow** (the `workflow_dispatch` trigger).
+
+### Run it locally
+
+```bash
+GEMINI_API_KEY=AIza... npm run scrape            # discover + write
+GEMINI_API_KEY=AIza... npm run scrape -- --dry-run  # print, don't write
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

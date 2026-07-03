@@ -164,6 +164,38 @@ export default function DetailPanel({
         </div>
       )}
 
+      {c.outcome &&
+        ((c.outcome.impact && c.outcome.impact.length > 0) ||
+          (c.outcome.sentiment && c.outcome.sentiment.length > 0)) && (
+          <div className="mt-3">
+            <p className="text-xs font-semibold text-zinc-900">Outcome</p>
+            {c.outcome.impact && c.outcome.impact.length > 0 && (
+              <div className="mt-1.5">
+                <p className="text-[11px] font-medium text-zinc-500">
+                  Effect on statutes &amp; other cases
+                </p>
+                <ul className="mt-1 list-disc space-y-1 pl-4 text-xs text-zinc-600 marker:text-zinc-300">
+                  {c.outcome.impact.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {c.outcome.sentiment && c.outcome.sentiment.length > 0 && (
+              <div className="mt-2">
+                <p className="text-[11px] font-medium text-zinc-500">
+                  Public sentiment
+                </p>
+                <ul className="mt-1 list-disc space-y-1 pl-4 text-xs text-zinc-600 marker:text-zinc-300">
+                  {c.outcome.sentiment.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
       <div className="mt-3">
         <p className="text-xs font-semibold text-zinc-900">Sources</p>
         <ul className="mt-1 space-y-1">
