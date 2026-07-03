@@ -1,86 +1,213 @@
 import type { Case } from "./schema";
-import type { EntityCategory, Status } from "./constants";
-import { ENTITY_CATEGORIES, STATUSES } from "./constants";
 import { statusAsOf } from "./filter";
+import { deriveIssues, ISSUE_CLUSTERS, type IssueKey } from "./issues";
+import {
+  NODE_TYPES,
+  EDGE_TYPES,
+  STATUS_GLOW,
+  GLOW_STYLES,
+  SIMILARITY,
+  type NodeType,
+  type EdgeType,
+  type GlowKind,
+} from "./graphConfig";
 
 export type GraphNode = {
   id: string;
-  kind: "entity" | "case";
+  nodeType: NodeType;
+  layer: 1 | 2 | 3;
   label: string;
   color: string;
-  val: number; // relative size for the force graph
-  // entity-only
-  category?: EntityCategory;
+  val: number;
+  degree: number;
+  firstAppear: string | null; // earliest connected filing date (timeline fade)
   // case-only
   caseId?: string;
-  status?: Status;
-  caseType?: string;
-  actionType?: string;
+  glowKind?: GlowKind;
+  glowColor?: string;
+  glowPulse?: boolean;
+  // issue-only
+  issueKey?: IssueKey;
 };
 
 export type GraphLink = {
   source: string;
   target: string;
+  edgeType: EdgeType;
   color: string;
-  side: "initiating" | "responding";
+  width: number;
+  weight: number;
 };
 
 export type GraphData = { nodes: GraphNode[]; links: GraphLink[] };
 
 const slug = (s: string) =>
-  s
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+  s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
+export const issueNodeId = (k: string) => `issue:${k}`;
+export const caseNodeId = (id: string) => `case:${id}`;
 export const entityNodeId = (name: string) => `entity:${slug(name)}`;
-export const caseNodeId = (caseId: string) => `case:${caseId}`;
+export const courtNodeId = (name: string) => `court:${slug(name)}`;
+export const lawNodeId = (name: string) => `law:${slug(name)}`;
 
-// Bipartite graph: entity nodes <-> case nodes.
-//  - initiating party:  entity --> case   (flow points into the case)
-//  - responding party:  case   --> entity (flow points at the target)
-// Case node + its links are colored by the case's status AS OF `asOf`.
+const ORG_RE =
+  /\b(inc|llc|ltd|l\.?p|corp|co|group|guild|records|music|entertainment|society|gmbh|plc|labs|technologies|studios|holdings|company|union|sag-aftra|noyb|aclu|coalition|commission|department|office|attorneys? general|naag|riaa)\b/i;
+
+// Map an entity party to a graph node type (color = type).
+export function partyNodeType(category: string, name: string): NodeType {
+  if (category === "governments" || category === "regulators") return "regulator";
+  if (category === "ai_company" || category === "publishers" || category === "media")
+    return "company";
+  if (category === "class_action") return "individual";
+  return ORG_RE.test(name) ? "company" : "individual";
+}
+
+function minDate(a: string | null, b: string | null): string | null {
+  if (!a) return b;
+  if (!b) return a;
+  return a < b ? a : b;
+}
+
 export function buildGraphData(cases: Case[], asOf: string): GraphData {
   const nodes = new Map<string, GraphNode>();
   const links: GraphLink[] = [];
+  const degree = new Map<string, number>();
+  const bump = (id: string) => degree.set(id, (degree.get(id) ?? 0) + 1);
 
+  const ensure = (
+    id: string,
+    nodeType: NodeType,
+    label: string,
+    firstAppear: string | null,
+    extra: Partial<GraphNode> = {},
+  ) => {
+    const existing = nodes.get(id);
+    if (existing) {
+      existing.firstAppear = minDate(existing.firstAppear, firstAppear);
+      return existing;
+    }
+    const meta = NODE_TYPES[nodeType];
+    const n: GraphNode = {
+      id,
+      nodeType,
+      layer: meta.layer,
+      label,
+      color: meta.color,
+      val: meta.baseSize,
+      degree: 0,
+      firstAppear,
+      ...extra,
+    };
+    nodes.set(id, n);
+    return n;
+  };
+
+  const addLink = (source: string, target: string, edgeType: EdgeType, weight = 1) => {
+    const e = EDGE_TYPES[edgeType];
+    links.push({ source, target, edgeType, color: e.color, width: e.baseWidth, weight });
+    bump(source);
+    bump(target);
+  };
+
+  // ---- Build nodes + structural links ----
   for (const c of cases) {
-    const effStatus = statusAsOf(c, asOf);
-    const statusColor = STATUSES[effStatus].color;
+    const issues = (c.issues as IssueKey[] | undefined) ?? deriveIssues(c);
+    const eff = statusAsOf(c, asOf);
+    const glowKind = STATUS_GLOW[eff] ?? "none";
+    const glow = GLOW_STYLES[glowKind];
 
     const cid = caseNodeId(c.id);
-    nodes.set(cid, {
-      id: cid,
-      kind: "case",
-      label: c.title,
-      color: statusColor,
-      val: 3,
+    ensure(cid, "case", c.title, c.filingDate, {
       caseId: c.id,
-      status: effStatus,
-      caseType: c.caseType,
-      actionType: c.actionType,
+      glowKind,
+      glowColor: glow.color,
+      glowPulse: glow.pulse,
     });
 
-    for (const p of c.parties) {
-      const eid = entityNodeId(p.name);
-      if (!nodes.has(eid)) {
-        const meta = ENTITY_CATEGORIES[p.category];
-        nodes.set(eid, {
-          id: eid,
-          kind: "entity",
-          label: p.name,
-          color: meta.color,
-          val: meta.size,
-          category: p.category,
-        });
-      }
-      if (p.side === "initiating") {
-        links.push({ source: eid, target: cid, color: statusColor, side: p.side });
-      } else {
-        links.push({ source: cid, target: eid, color: statusColor, side: p.side });
-      }
+    // Issue clusters (layer 1)
+    for (const k of issues) {
+      const iid = issueNodeId(k);
+      ensure(iid, "issue_cluster", ISSUE_CLUSTERS[k]?.label ?? k, c.filingDate, {
+        issueKey: k,
+      });
+      addLink(iid, cid, "issue_case");
     }
+
+    // Parties → company / individual / regulator (layer 3)
+    for (const p of c.parties) {
+      const t = partyNodeType(p.category, p.name);
+      const eid = entityNodeId(p.name);
+      ensure(eid, t, p.name, c.filingDate);
+      addLink(cid, eid, "case_entity");
+    }
+
+    // Court (layer 3)
+    if (c.court) {
+      const courtId = courtNodeId(c.court);
+      ensure(courtId, "court", c.court, c.filingDate);
+      addLink(cid, courtId, "case_court");
+    }
+
+    // Laws / statutes (layer 3)
+    for (const s of c.statutes ?? []) {
+      const lid = lawNodeId(s);
+      ensure(lid, "law", s, c.filingDate);
+      addLink(cid, lid, "case_law");
+    }
+  }
+
+  // ---- Related-case edges (weighted similarity, thresholded, capped) ----
+  const feats = cases.map((c) => ({
+    id: c.id,
+    issues: new Set((c.issues as string[] | undefined) ?? deriveIssues(c)),
+    init: new Set(c.parties.filter((p) => p.side === "initiating").map((p) => p.name)),
+    resp: new Set(c.parties.filter((p) => p.side === "responding").map((p) => p.name)),
+    court: c.court ?? null,
+    statutes: new Set(c.statutes ?? []),
+  }));
+  const overlap = (a: Set<string>, b: Set<string>) => {
+    let n = 0;
+    for (const x of a) if (b.has(x)) n++;
+    return n;
+  };
+  const w = SIMILARITY.weights;
+  const candidates: Array<{ a: number; b: number; score: number }> = [];
+  for (let i = 0; i < feats.length; i++) {
+    for (let j = i + 1; j < feats.length; j++) {
+      const A = feats[i];
+      const B = feats[j];
+      const score =
+        overlap(A.issues, B.issues) * w.issue +
+        overlap(A.resp, B.resp) * w.company +
+        overlap(A.init, B.init) * w.plaintiff +
+        (A.court && A.court === B.court ? w.court : 0) +
+        overlap(A.statutes, B.statutes) * w.statute;
+      if (score >= SIMILARITY.minScore) candidates.push({ a: i, b: j, score });
+    }
+  }
+  // Cap edges per case to keep it readable/scalable.
+  candidates.sort((x, y) => y.score - x.score);
+  const perCase = new Map<number, number>();
+  const used = new Set<string>();
+  for (const cand of candidates) {
+    if ((perCase.get(cand.a) ?? 0) >= SIMILARITY.maxPerCase) continue;
+    if ((perCase.get(cand.b) ?? 0) >= SIMILARITY.maxPerCase) continue;
+    const key = `${cand.a}-${cand.b}`;
+    if (used.has(key)) continue;
+    used.add(key);
+    perCase.set(cand.a, (perCase.get(cand.a) ?? 0) + 1);
+    perCase.set(cand.b, (perCase.get(cand.b) ?? 0) + 1);
+    addLink(caseNodeId(feats[cand.a].id), caseNodeId(feats[cand.b].id), "related", cand.score);
+  }
+
+  // ---- Size by degree (importance) ----
+  let maxDeg = 1;
+  for (const d of degree.values()) if (d > maxDeg) maxDeg = d;
+  for (const n of nodes.values()) {
+    const deg = degree.get(n.id) ?? 0;
+    n.degree = deg;
+    const meta = NODE_TYPES[n.nodeType];
+    n.val = meta.baseSize + meta.degreeBoost * Math.sqrt(deg / maxDeg);
   }
 
   return { nodes: [...nodes.values()], links };

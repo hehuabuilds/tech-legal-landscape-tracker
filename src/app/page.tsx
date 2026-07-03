@@ -11,42 +11,36 @@ export default function Home() {
   const today = getToday();
 
   return (
-    <main className="min-h-screen bg-[#05060d] text-slate-200">
-      <div className="mx-auto max-w-[1400px] px-4 py-8">
+    <main className="min-h-screen bg-[#f1f1f2] text-zinc-800">
+      <div className="relative mx-auto max-w-[1400px] px-6 py-8 sm:px-10 lg:px-14">
         <header className="mb-6">
-          <h1 className="bg-gradient-to-r from-sky-300 via-indigo-300 to-fuchsia-300 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl">
-            AI Legal Landscape Tracker
-          </h1>
-          <p className="mt-1 max-w-3xl text-sm text-slate-400">
-            A living, source-backed map of AI-related legal cases and actions
-            from Jan 1 2025 onward — lawsuits, regulatory actions, investigations
-            and settlements. AI companies are central nodes; plaintiffs,
-            regulators and other parties orbit them; edges are cases colored by
-            status. Informational only — not legal advice.
-          </p>
-        </header>
-
-        <section className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
-          {[
-            { label: "Cases / actions", value: stats.total },
-            { label: "AI companies", value: stats.companies },
-            { label: "Entities", value: stats.entities },
-            { label: "Verified", value: stats.verified },
-            { label: "Needs review", value: stats.needsReview },
-          ].map((s) => (
-            <div
-              key={s.label}
-              className="rounded-xl border border-slate-800 bg-slate-900/60 p-4"
-            >
-              <div className="text-2xl font-bold text-white">{s.value}</div>
-              <div className="text-xs text-slate-500">{s.label}</div>
+          <div>
+            <h1 className="font-display text-3xl font-bold leading-tight tracking-tight text-[#e76a5e] sm:text-4xl">
+              Legal Landscape Tracker (AI &amp; Tech)
+            </h1>
+            <div className="mt-2 max-w-4xl text-sm leading-relaxed text-zinc-500">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="font-semibold text-zinc-700">
+                  &lt;{stats.total} cases, {stats.entities} entities, and{" "}
+                  {stats.companies} companies&gt;
+                </span>
+                <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-[#1ac299]/30 bg-[#1ac299]/10 px-2 py-0.5 text-[11px] font-medium text-[#0f9b7a]">
+                  <span className="animate-pulse text-[10px] leading-none text-[#1ac299]">✶</span>
+                  Live
+                </span>
+              </div>
+              <p className="mt-1">
+                A living, source-backed map of AI-related legal cases and actions
+                from 1st Jan 2025 onwards: lawsuits, regulatory actions,
+                investigations and settlements.
+              </p>
             </div>
-          ))}
-        </section>
+          </div>
+        </header>
 
         <Explorer cases={cases} jurisdictions={jurisdictions} today={today} />
 
-        <footer className="mt-10 border-t border-slate-800 pt-4 text-xs text-slate-500">
+        <footer className="mt-10 border-t border-zinc-200 pt-4 text-xs text-zinc-500">
           Data compiled from public court dockets, regulator publications and
           news reporting. Every record links to at least one source. Historical
           records are preserved; statuses evolve along the timeline. Corrections

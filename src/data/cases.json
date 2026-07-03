@@ -62,7 +62,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, N.D. Cal.",
+    "statutes": [
+      "Copyright Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "fair use (defense)"
+    ]
   },
   {
     "id": "kadrey-v-meta-platforms",
@@ -113,7 +121,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, N.D. Cal.",
+    "statutes": [
+      "Copyright Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "fair use (defense)"
+    ]
   },
   {
     "id": "nyt-v-openai-microsoft-sdny",
@@ -180,7 +196,20 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "Copyright Act",
+      "DMCA §1202",
+      "Lanham Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "CMI removal",
+      "unfair competition",
+      "trademark infringement"
+    ]
   },
   {
     "id": "in-re-openai-copyright-mdl-3143",
@@ -242,7 +271,18 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "Copyright Act",
+      "DMCA §1202"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "CMI removal",
+      "unjust enrichment"
+    ]
   },
   {
     "id": "thomson-reuters-v-ross-intelligence",
@@ -298,7 +338,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, D. Del.",
+    "statutes": [
+      "Copyright Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "fair use (defense)"
+    ]
   },
   {
     "id": "raw-story-v-openai-sdny",
@@ -354,7 +402,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "needs_review"
+    "reviewStatus": "needs_review",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "DMCA §1202"
+    ],
+    "legalTheories": [
+      "CMI removal"
+    ]
   },
   {
     "id": "intercept-media-v-openai-sdny",
@@ -416,7 +471,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "needs_review"
+    "reviewStatus": "needs_review",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "DMCA §1202"
+    ],
+    "legalTheories": [
+      "CMI removal"
+    ]
   },
   {
     "id": "ziff-davis-v-openai-ddel",
@@ -462,7 +524,19 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, D. Del.",
+    "statutes": [
+      "Copyright Act",
+      "DMCA §1202",
+      "Lanham Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "CMI removal",
+      "trademark infringement"
+    ]
   },
   {
     "id": "advance-conde-nast-v-cohere",
@@ -513,7 +587,18 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "Copyright Act",
+      "Lanham Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "trademark infringement",
+      "unfair competition"
+    ]
   },
   {
     "id": "dow-jones-nypost-v-perplexity",
@@ -564,7 +649,17 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "needs_review"
+    "reviewStatus": "needs_review",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "Copyright Act",
+      "Lanham Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "trademark infringement",
+      "unfair competition"
+    ]
   },
   {
     "id": "umg-sony-warner-v-suno",
@@ -627,7 +722,16 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, D. Mass.",
+    "statutes": [
+      "Copyright Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "fair use (defense)"
+    ]
   },
   {
     "id": "umg-v-udio",
@@ -695,7 +799,16 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "Copyright Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "fair use (defense)"
+    ]
   },
   {
     "id": "concord-v-anthropic-lyrics",
@@ -755,7 +868,16 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, N.D. Cal.",
+    "statutes": [
+      "Copyright Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "fair use (defense)"
+    ]
   },
   {
     "id": "getty-v-stability-ai-us",
@@ -806,7 +928,19 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, N.D. Cal.",
+    "statutes": [
+      "Copyright Act",
+      "DMCA §1202",
+      "Lanham Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "CMI removal",
+      "trademark infringement",
+      "unfair competition"
+    ]
   },
   {
     "id": "getty-v-stability-ai-uk",
@@ -857,7 +991,16 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "UK High Court",
+    "statutes": [
+      "CDPA 1988",
+      "Trade Marks Act 1994"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "trademark infringement"
+    ]
   },
   {
     "id": "andersen-v-stability-ai",
@@ -925,7 +1068,20 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "needs_review"
+    "reviewStatus": "needs_review",
+    "court": "U.S. District Court, N.D. Cal.",
+    "statutes": [
+      "Copyright Act",
+      "DMCA §1202",
+      "Lanham Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "CMI removal",
+      "trademark infringement",
+      "unfair competition"
+    ]
   },
   {
     "id": "disney-universal-warner-v-midjourney",
@@ -1002,7 +1158,16 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, C.D. Cal.",
+    "statutes": [
+      "Copyright Act"
+    ],
+    "legalTheories": [
+      "copyright infringement",
+      "vicarious infringement",
+      "fair use (defense)"
+    ]
   },
   {
     "id": "gema-v-openai-munich",
@@ -1053,7 +1218,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Regional Court of Munich I",
+    "statutes": [],
+    "legalTheories": [
+      "copyright infringement"
+    ]
   },
   {
     "id": "reddit-v-anthropic-2025",
@@ -1104,7 +1274,17 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "San Francisco Superior Court (Cal.)",
+    "statutes": [
+      "UCL (Cal. §17200)"
+    ],
+    "legalTheories": [
+      "breach of contract",
+      "unjust enrichment",
+      "unfair competition",
+      "trespass to chattels"
+    ]
   },
   {
     "id": "reddit-v-perplexity-serpapi-2025",
@@ -1161,7 +1341,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "DMCA §1201"
+    ],
+    "legalTheories": [
+      "unfair competition",
+      "unjust enrichment"
+    ]
   },
   {
     "id": "fastcase-v-alexi-2025",
@@ -1212,7 +1400,17 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "needs_review"
+    "reviewStatus": "needs_review",
+    "court": "U.S. District Court, D.D.C.",
+    "statutes": [
+      "Lanham Act",
+      "DTSA"
+    ],
+    "legalTheories": [
+      "breach of contract",
+      "trademark infringement",
+      "trade secret misappropriation"
+    ]
   },
   {
     "id": "musk-v-openai-altman",
@@ -1274,7 +1472,16 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, N.D. Cal.",
+    "statutes": [
+      "Sherman Act",
+      "UCL (Cal. §17200)"
+    ],
+    "legalTheories": [
+      "breach of contract",
+      "unfair competition"
+    ]
   },
   {
     "id": "ftc-6b-ai-partnerships-report",
@@ -1331,7 +1538,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. FTC",
+    "statutes": [
+      "FTC Act §6(b)"
+    ],
+    "legalTheories": []
   },
   {
     "id": "us-v-google-search-remedies-ai",
@@ -1387,7 +1599,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, D.D.C.",
+    "statutes": [
+      "Sherman Act"
+    ],
+    "legalTheories": [
+      "monopolization"
+    ]
   },
   {
     "id": "doj-nvidia-antitrust-investigation",
@@ -1438,7 +1657,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "needs_review"
+    "reviewStatus": "needs_review",
+    "court": "U.S. DOJ",
+    "statutes": [
+      "Sherman Act"
+    ],
+    "legalTheories": [
+      "monopolization"
+    ]
   },
   {
     "id": "cma-microsoft-openai-merger-inquiry",
@@ -1495,7 +1721,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "UK CMA",
+    "statutes": [
+      "Enterprise Act 2002"
+    ],
+    "legalTheories": []
   },
   {
     "id": "xai-v-apple-openai-antitrust",
@@ -1552,7 +1783,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, N.D. Tex.",
+    "statutes": [
+      "Sherman Act"
+    ],
+    "legalTheories": [
+      "monopolization",
+      "unfair competition"
+    ]
   },
   {
     "id": "mobley-v-workday",
@@ -1603,7 +1842,16 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, N.D. Cal.",
+    "statutes": [
+      "Title VII",
+      "ADA",
+      "ADEA"
+    ],
+    "legalTheories": [
+      "employment discrimination"
+    ]
   },
   {
     "id": "sag-aftra-video-game-strike-ai",
@@ -1654,7 +1902,10 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "SAG-AFTRA collective bargaining",
+    "statutes": [],
+    "legalTheories": []
   },
   {
     "id": "sag-aftra-fortnite-darth-vader-ulp",
@@ -1700,7 +1951,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. NLRB",
+    "statutes": [
+      "NLRA"
+    ],
+    "legalTheories": [
+      "unfair labor practice"
+    ]
   },
   {
     "id": "aclu-hirevue-intuit-eeoc-complaint",
@@ -1752,7 +2010,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. EEOC",
+    "statutes": [
+      "ADA",
+      "Title VII"
+    ],
+    "legalTheories": [
+      "employment discrimination"
+    ]
   },
   {
     "id": "raine-v-openai",
@@ -1809,7 +2075,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "San Francisco Superior Court (Cal.)",
+    "statutes": [],
+    "legalTheories": [
+      "wrongful death / product liability"
+    ]
   },
   {
     "id": "garcia-v-character-technologies",
@@ -1871,7 +2142,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, M.D. Fla.",
+    "statutes": [],
+    "legalTheories": [
+      "wrongful death / product liability"
+    ]
   },
   {
     "id": "af-v-character-technologies-texas",
@@ -1928,7 +2204,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, E.D. Tex.",
+    "statutes": [],
+    "legalTheories": [
+      "wrongful death / product liability"
+    ]
   },
   {
     "id": "smvlc-chatgpt-suicide-lawsuits",
@@ -1980,7 +2261,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "California Superior Court",
+    "statutes": [],
+    "legalTheories": [
+      "wrongful death / product liability"
+    ]
   },
   {
     "id": "ftc-6b-ai-companion-chatbots",
@@ -2038,7 +2324,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. FTC",
+    "statutes": [
+      "FTC Act §6(b)"
+    ],
+    "legalTheories": []
   },
   {
     "id": "character-ai-google-teen-harm-settlement",
@@ -2090,7 +2381,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. state courts (coordinated)",
+    "statutes": [],
+    "legalTheories": [
+      "wrongful death / product liability"
+    ]
   },
   {
     "id": "kentucky-ag-v-character-technologies",
@@ -2132,7 +2428,13 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Kentucky Circuit Court",
+    "statutes": [],
+    "legalTheories": [
+      "deceptive practices",
+      "unlawful data processing"
+    ]
   },
   {
     "id": "peralta-v-character-technologies",
@@ -2189,7 +2491,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Colorado District Court",
+    "statutes": [],
+    "legalTheories": [
+      "wrongful death / product liability"
+    ]
   },
   {
     "id": "44-state-ags-ai-child-safety-letter",
@@ -2241,7 +2548,10 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. State Attorneys General (NAAG)",
+    "statutes": [],
+    "legalTheories": []
   },
   {
     "id": "walters-v-openai-defamation",
@@ -2292,7 +2602,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Georgia Superior Court (Gwinnett County)",
+    "statutes": [],
+    "legalTheories": [
+      "defamation"
+    ]
   },
   {
     "id": "starbuck-v-meta-ai-defamation",
@@ -2343,7 +2658,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Delaware Superior Court",
+    "statutes": [],
+    "legalTheories": [
+      "defamation"
+    ]
   },
   {
     "id": "starbuck-v-google-ai-defamation",
@@ -2389,7 +2709,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Delaware Superior Court",
+    "statutes": [],
+    "legalTheories": [
+      "defamation"
+    ]
   },
   {
     "id": "garante-deepseek-italy-ban",
@@ -2440,7 +2765,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Italian Garante (DPA)",
+    "statutes": [
+      "GDPR"
+    ],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "noyb-openai-holmen-norway",
@@ -2486,7 +2818,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Norwegian DPA (Datatilsynet)",
+    "statutes": [
+      "GDPR"
+    ],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "pipc-korea-deepseek",
@@ -2537,7 +2876,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "South Korean PIPC",
+    "statutes": [],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "dpc-ireland-x-grok-training",
@@ -2588,7 +2932,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Irish DPC",
+    "statutes": [
+      "GDPR"
+    ],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "dpc-ireland-x-grok-deepfakes",
@@ -2634,7 +2985,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Irish DPC",
+    "statutes": [
+      "GDPR"
+    ],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "noyb-meta-ai-training-eu",
@@ -2685,7 +3043,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "EU national DPAs",
+    "statutes": [
+      "GDPR"
+    ],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "amazon-alexa-voice-privacy-class-action",
@@ -2731,7 +3096,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "needs_review"
+    "reviewStatus": "needs_review",
+    "court": "U.S. District Court, W.D. Wash.",
+    "statutes": [],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "texas-ag-meta-characterai-investigation",
@@ -2783,7 +3153,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Texas Attorney General",
+    "statutes": [],
+    "legalTheories": [
+      "deceptive practices"
+    ]
   },
   {
     "id": "ftc-rytr-ai-reviews",
@@ -2834,7 +3209,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. FTC",
+    "statutes": [
+      "FTC Act §5"
+    ],
+    "legalTheories": [
+      "deceptive practices",
+      "unfair competition"
+    ]
   },
   {
     "id": "ftc-workado-ai-detector",
@@ -2885,7 +3268,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. FTC",
+    "statutes": [
+      "FTC Act §5"
+    ],
+    "legalTheories": [
+      "deceptive practices"
+    ]
   },
   {
     "id": "ftc-cleo-ai-settlement",
@@ -2931,7 +3321,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. FTC",
+    "statutes": [
+      "FTC Act §5",
+      "ROSCA"
+    ],
+    "legalTheories": [
+      "deceptive practices"
+    ]
   },
   {
     "id": "ftc-donotpay-robot-lawyer-order",
@@ -2981,7 +3379,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. FTC",
+    "statutes": [
+      "FTC Act §5"
+    ],
+    "legalTheories": [
+      "deceptive practices"
+    ]
   },
   {
     "id": "eu-commission-dsa-x-grok-proceedings",
@@ -3027,7 +3432,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "European Commission",
+    "statutes": [
+      "DSA"
+    ],
+    "legalTheories": [
+      "failure to mitigate systemic risks"
+    ]
   },
   {
     "id": "eu-ai-act-implementation-enforcement",
@@ -3081,7 +3493,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "European Commission",
+    "statutes": [
+      "EU AI Act"
+    ],
+    "legalTheories": [
+      "prohibited AI practices"
+    ]
   },
   {
     "id": "agcm-deepseek-consumer-probe",
@@ -3127,7 +3546,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Italian AGCM",
+    "statutes": [],
+    "legalTheories": [
+      "unfair commercial practices"
+    ]
   },
   {
     "id": "garante-clothoff-deepfake-stop",
@@ -3177,7 +3601,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Italian Garante (DPA)",
+    "statutes": [
+      "GDPR"
+    ],
+    "legalTheories": [
+      "unlawful data processing"
+    ]
   },
   {
     "id": "cma-google-strategic-market-status",
@@ -3227,7 +3658,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "UK CMA",
+    "statutes": [
+      "DMCCA"
+    ],
+    "legalTheories": []
   },
   {
     "id": "ca-de-ag-openai-restructuring-review",
@@ -3283,7 +3719,12 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "California & Delaware AGs",
+    "statutes": [],
+    "legalTheories": [
+      "charitable trust oversight"
+    ]
   },
   {
     "id": "sec-presto-automation-ai-washing",
@@ -3329,7 +3770,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. SEC",
+    "statutes": [
+      "Securities Act",
+      "Securities Exchange Act"
+    ],
+    "legalTheories": [
+      "securities fraud"
+    ]
   },
   {
     "id": "doj-sec-nate-saniger-ai-fraud",
@@ -3375,7 +3824,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "U.S. District Court, S.D.N.Y.",
+    "statutes": [
+      "Securities Exchange Act"
+    ],
+    "legalTheories": [
+      "securities fraud",
+      "wire fraud"
+    ]
   },
   {
     "id": "agcm-meta-whatsapp-ai-abuse-of-dominance",
@@ -3425,7 +3882,14 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Italian AGCM",
+    "statutes": [
+      "Article 102 TFEU"
+    ],
+    "legalTheories": [
+      "abuse of dominance"
+    ]
   },
   {
     "id": "berlin-dpa-deepseek-dsa-referral",
@@ -3475,6 +3939,15 @@
     "lastVerified": "2026-07-01",
     "firstSeen": "2026-07-01",
     "lastUpdated": "2026-07-01",
-    "reviewStatus": "published"
+    "reviewStatus": "published",
+    "court": "Berlin DPA",
+    "statutes": [
+      "GDPR",
+      "DSA"
+    ],
+    "legalTheories": [
+      "cross-border data transfer",
+      "unlawful data processing"
+    ]
   }
 ]

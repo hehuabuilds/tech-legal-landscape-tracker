@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { FilterState } from "@/lib/filter";
 import {
   CASE_TYPE_KEYS,
@@ -36,76 +37,111 @@ export default function Filters({
   onChange,
   onReset,
 }: Props) {
+  const [open, setOpen] = useState(true);
+
   return (
-    <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
+    <div className="rounded-lg border border-zinc-200 bg-white p-4 shadow-sm">
       <div className="flex flex-wrap items-center gap-3">
         <input
           type="search"
           value={filters.query}
           onChange={(e) => onChange({ ...filters, query: e.target.value })}
           placeholder="Search parties, jurisdiction, summary, sources…"
-          className="min-w-[240px] flex-1 rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-sm text-slate-100 outline-none placeholder:text-slate-500 focus:border-sky-500"
+          className="min-w-[240px] flex-1 rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-[#e76a5e] focus:bg-white focus:ring-2 focus:ring-[#e76a5e]/20"
         />
-        <span className="text-xs text-slate-400">
+        <span className="text-xs text-zinc-500">
           {resultCount} / {totalCount} shown
         </span>
         <button
           onClick={onReset}
-          className="rounded-md border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:bg-slate-800"
+          className="rounded-lg border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc-600 transition-colors hover:border-[#e76a5e] hover:bg-[#e76a5e]/10 hover:text-[#e76a5e]"
         >
           Reset filters
         </button>
+        <button
+          onClick={() => setOpen((o) => !o)}
+          aria-expanded={open}
+          className="flex items-center gap-1.5 rounded-lg border border-[#e76a5e] bg-[#e76a5e]/10 px-3 py-1.5 text-xs font-medium text-[#e76a5e] transition-colors hover:bg-[#e76a5e]/20"
+        >
+          {open ? "Hide filters" : "Show filters"}
+          <span
+            className={`inline-block transition-transform ${open ? "rotate-180" : ""}`}
+            aria-hidden
+          >
+            ▾
+          </span>
+        </button>
       </div>
 
-      <ChipGroup
-        label="Case type"
-        options={CASE_TYPE_KEYS.map((k) => ({
-          key: k,
-          label: CASE_TYPES[k].label,
-          color: CASE_TYPES[k].color,
-        }))}
-        selected={filters.caseTypes}
-        onToggle={(k) =>
-          onChange({ ...filters, caseTypes: toggle(filters.caseTypes, k as CaseType) })
-        }
-      />
+      {open && (
+        <>
+          <div className="mt-4 grid grid-cols-1 gap-x-8 gap-y-5 border-t border-zinc-100 pt-4 sm:grid-cols-2 lg:grid-cols-3">
+            <ChipGroup
+              label="Case type"
+              options={CASE_TYPE_KEYS.map((k) => ({
+                key: k,
+                label: CASE_TYPES[k].label,
+                color: CASE_TYPES[k].color,
+              }))}
+              selected={filters.caseTypes}
+              onToggle={(k) =>
+                onChange({ ...filters, caseTypes: toggle(filters.caseTypes, k as CaseType) })
+              }
+              onReplace={(keys) =>
+                onChange({ ...filters, caseTypes: keys as CaseType[] })
+              }
+            />
 
-      <ChipGroup
-        label="Action type"
-        options={ACTION_TYPE_KEYS.map((k) => ({
-          key: k,
-          label: ACTION_TYPES[k].label,
-        }))}
-        selected={filters.actionTypes}
-        onToggle={(k) =>
-          onChange({
-            ...filters,
-            actionTypes: toggle(filters.actionTypes, k as ActionType),
-          })
-        }
-      />
+            <ChipGroup
+              label="Action type"
+              options={ACTION_TYPE_KEYS.map((k) => ({
+                key: k,
+                label: ACTION_TYPES[k].label,
+              }))}
+              selected={filters.actionTypes}
+              onToggle={(k) =>
+                onChange({
+                  ...filters,
+                  actionTypes: toggle(filters.actionTypes, k as ActionType),
+                })
+              }
+              onReplace={(keys) =>
+                onChange({ ...filters, actionTypes: keys as ActionType[] })
+              }
+            />
 
-      <ChipGroup
-        label="Status"
-        options={STATUS_KEYS.map((k) => ({
-          key: k,
-          label: STATUSES[k].label,
-          color: STATUSES[k].color,
-        }))}
-        selected={filters.statuses}
-        onToggle={(k) =>
-          onChange({ ...filters, statuses: toggle(filters.statuses, k as Status) })
-        }
-      />
+            <ChipGroup
+              label="Status"
+              options={STATUS_KEYS.map((k) => ({
+                key: k,
+                label: STATUSES[k].label,
+                color: STATUSES[k].color,
+              }))}
+              selected={filters.statuses}
+              onToggle={(k) =>
+                onChange({ ...filters, statuses: toggle(filters.statuses, k as Status) })
+              }
+              onReplace={(keys) =>
+                onChange({ ...filters, statuses: keys as Status[] })
+              }
+            />
+          </div>
 
-      <ChipGroup
-        label="Jurisdiction"
-        options={jurisdictions.map((j) => ({ key: j, label: j }))}
-        selected={filters.jurisdictions}
-        onToggle={(k) =>
-          onChange({ ...filters, jurisdictions: toggle(filters.jurisdictions, k) })
-        }
-      />
+          <div className="mt-5 border-t border-zinc-100 pt-4">
+            <ChipGroup
+              label="Jurisdiction"
+              options={jurisdictions.map((j) => ({ key: j, label: j }))}
+              selected={filters.jurisdictions}
+              onToggle={(k) =>
+                onChange({ ...filters, jurisdictions: toggle(filters.jurisdictions, k) })
+              }
+              onReplace={(keys) =>
+                onChange({ ...filters, jurisdictions: keys })
+              }
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -115,17 +151,29 @@ function ChipGroup({
   options,
   selected,
   onToggle,
+  onReplace,
 }: {
   label: string;
   options: { key: string; label: string; color?: string }[];
   selected: string[];
   onToggle: (key: string) => void;
+  onReplace: (keys: string[]) => void;
 }) {
+  const allKeys = options.map((o) => o.key);
+  const allOn = allKeys.length > 0 && allKeys.every((k) => selected.includes(k));
   return (
-    <div className="mt-3">
-      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
-        {label}
-      </p>
+    <div>
+      <div className="mb-2 flex items-center gap-2">
+        <p className="text-xs font-bold uppercase tracking-wide text-zinc-700">
+          {label}
+        </p>
+        <button
+          onClick={() => onReplace(allOn ? [] : allKeys)}
+          className="rounded-md border border-zinc-200 bg-zinc-50 px-1.5 py-0.5 text-[10px] font-medium text-zinc-500 transition-colors hover:border-[#e76a5e] hover:bg-[#e76a5e]/10 hover:text-[#e76a5e]"
+        >
+          {allOn ? "Clear" : "Select all"}
+        </button>
+      </div>
       <div className="flex flex-wrap gap-1.5">
         {options.map((o) => {
           const on = selected.includes(o.key);
@@ -133,10 +181,10 @@ function ChipGroup({
             <button
               key={o.key}
               onClick={() => onToggle(o.key)}
-              className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs transition-colors ${
+              className={`flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs transition-colors ${
                 on
-                  ? "border-transparent bg-slate-100 font-medium text-slate-900"
-                  : "border-slate-700 text-slate-300 hover:border-slate-500"
+                  ? "border-transparent bg-zinc-900 font-medium text-white"
+                  : "border-zinc-200 text-zinc-600 hover:border-zinc-300 hover:bg-zinc-50"
               }`}
             >
               {o.color && (

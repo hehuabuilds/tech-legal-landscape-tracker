@@ -48,6 +48,12 @@ export const caseSchema = z.object({
   sources: z.array(sourceSchema).min(1, "every case must have >= 1 source URL"),
   summary: z.string(),
   timeline: z.array(timelineEventSchema),
+  // structured legal metadata (drives court + law nodes and the detail panel)
+  court: z.string().nullish(),
+  statutes: z.array(z.string()).optional(),
+  legalTheories: z.array(z.string()).optional(),
+  // issue clusters (layer-1 anchors) — derived at load if absent
+  issues: z.array(z.string()).optional(),
   // living-DB bookkeeping
   firstSeen: z.string(),
   lastVerified: z.string(),

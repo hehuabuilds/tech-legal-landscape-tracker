@@ -28,6 +28,7 @@ export default function Explorer({
     defaultFilterState(today),
   );
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
 
   const filtered = useMemo(
     () => applyFilters(cases, filters),
@@ -56,32 +57,52 @@ export default function Explorer({
         }}
       />
 
-      <Legend />
-
       <div className="flex flex-col gap-4 lg:flex-row">
         <div className="min-w-0 flex-1">
-          <ForceGraphView
-            data={graphData}
-            selectedNodeId={selectedId}
-            onSelectCase={setSelectedId}
-          />
+          <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200 p-4">
+              <Legend />
+              <label className="flex cursor-pointer items-center gap-2 text-xs text-zinc-600">
+                <input
+                  type="checkbox"
+                  checked={showDetails}
+                  onChange={(e) => setShowDetails(e.target.checked)}
+                  className="accent-[#e76a5e]"
+                />
+                Show details (reveal companies, people, courts, laws)
+              </label>
+            </div>
+            <ForceGraphView
+              data={graphData}
+              selectedCaseId={selectedId}
+              showDetails={showDetails}
+              onSelectCase={setSelectedId}
+            />
+            <div className="border-t border-zinc-200">
+              <TimelineSlider
+                asOfDate={filters.asOfDate}
+                today={today}
+                onChange={(date) => setFilters((f) => ({ ...f, asOfDate: date }))}
+              />
+            </div>
+          </div>
         </div>
         {selected && (
-          <div className="h-[640px] w-full shrink-0 lg:w-96">
-            <DetailPanel
-              c={selected}
-              asOfDate={filters.asOfDate}
-              onClose={() => setSelectedId(null)}
-            />
+          <div className="w-full shrink-0 lg:relative lg:w-96">
+            {/* On desktop the panel is absolutely positioned so its (possibly
+                tall) content doesn't stretch the row — the row height is driven
+                by the left column, and the panel fills it and scrolls inside.
+                On mobile it just flows at its natural height. */}
+            <div className="lg:absolute lg:inset-0">
+              <DetailPanel
+                c={selected}
+                asOfDate={filters.asOfDate}
+                onClose={() => setSelectedId(null)}
+              />
+            </div>
           </div>
         )}
       </div>
-
-      <TimelineSlider
-        asOfDate={filters.asOfDate}
-        today={today}
-        onChange={(date) => setFilters((f) => ({ ...f, asOfDate: date }))}
-      />
 
       <DataTable
         cases={filtered}

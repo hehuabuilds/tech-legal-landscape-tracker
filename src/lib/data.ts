@@ -1,14 +1,18 @@
 import { cases as rawCases } from "@/data/cases";
 import { caseSchema, type Case } from "./schema";
+import { deriveIssues } from "./issues";
 
 // Validate the seed at load time. Any record that fails the schema (e.g. a
-// missing source URL) is dropped and logged, never rendered.
+// missing source URL) is dropped and logged, never rendered. Issue clusters
+// are derived here if not already present on the record.
 export function getCases(): Case[] {
   const valid: Case[] = [];
   for (const row of rawCases) {
     const parsed = caseSchema.safeParse(row);
     if (parsed.success) {
-      valid.push(parsed.data);
+      const c = parsed.data;
+      if (!c.issues || c.issues.length === 0) c.issues = deriveIssues(c);
+      valid.push(c);
     } else {
       const id = (row as { id?: string })?.id ?? "<unknown>";
       console.error(

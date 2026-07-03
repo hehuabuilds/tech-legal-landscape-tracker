@@ -8,6 +8,8 @@ import {
   ENTITY_CATEGORIES,
 } from "@/lib/constants";
 import { statusAsOf } from "@/lib/filter";
+import { ISSUE_CLUSTERS, type IssueKey } from "@/lib/issues";
+import { NODE_TYPES } from "@/lib/graphConfig";
 
 export default function DetailPanel({
   c,
@@ -23,12 +25,12 @@ export default function DetailPanel({
   const responding = c.parties.filter((p) => p.side === "responding");
 
   return (
-    <div className="flex h-full flex-col overflow-y-auto rounded-xl border border-slate-800 bg-slate-900/80 p-4 text-slate-200 backdrop-blur">
+    <div className="flex h-full w-full flex-col overflow-y-auto rounded-lg border border-zinc-200 bg-white p-4 text-zinc-700 shadow-sm">
       <div className="flex items-start justify-between gap-2">
-        <h3 className="text-sm font-semibold text-white">{c.title}</h3>
+        <h3 className="text-sm font-semibold text-zinc-900">{c.title}</h3>
         <button
           onClick={onClose}
-          className="shrink-0 rounded px-1.5 text-slate-400 hover:bg-slate-800 hover:text-white"
+          className="shrink-0 rounded px-1.5 text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900"
           aria-label="Close"
         >
           ✕
@@ -51,50 +53,111 @@ export default function DetailPanel({
         >
           {CASE_TYPES[c.caseType].label}
         </span>
-        <span className="rounded-full bg-slate-800 px-2 py-0.5 text-slate-300">
+        <span className="rounded-full bg-zinc-100 px-2 py-0.5 text-zinc-600">
           {ACTION_TYPES[c.actionType].label}
         </span>
         {c.reviewStatus === "needs_review" && (
-          <span className="rounded-full bg-amber-500/20 px-2 py-0.5 font-medium text-amber-300">
+          <span className="rounded-full bg-amber-100 px-2 py-0.5 font-medium text-amber-700">
             needs review
           </span>
         )}
       </div>
 
-      <dl className="mt-3 space-y-1 text-xs text-slate-400">
+      {c.issues && c.issues.length > 0 && (
+        <div className="mt-2 flex flex-wrap gap-1">
+          {(c.issues as IssueKey[]).map((k) => (
+            <span
+              key={k}
+              className="rounded-full px-2 py-0.5 text-[10px] font-medium"
+              style={{
+                backgroundColor: `${NODE_TYPES.issue_cluster.color}22`,
+                color: NODE_TYPES.issue_cluster.color,
+              }}
+            >
+              {ISSUE_CLUSTERS[k]?.label ?? k}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <dl className="mt-3 space-y-1 text-xs text-zinc-500">
         <div>Jurisdiction: {c.jurisdiction}</div>
+        {c.court && <div>Court / forum: {c.court}</div>}
         {c.filingDate && <div>Filed / announced: {c.filingDate}</div>}
         <div>Last verified: {c.lastVerified}</div>
       </dl>
 
+      {c.summary && (
+        <p className="mt-3 rounded-lg border border-zinc-100 bg-zinc-50 p-3 text-xs leading-relaxed text-zinc-600">
+          {c.summary}
+        </p>
+      )}
+
+      {c.statutes && c.statutes.length > 0 && (
+        <div className="mt-2">
+          <p className="text-xs font-semibold text-zinc-900">Statutes</p>
+          <div className="mt-1 flex flex-wrap gap-1">
+            {c.statutes.map((s) => (
+              <span
+                key={s}
+                className="rounded px-1.5 py-0.5 text-[10px] font-medium"
+                style={{
+                  backgroundColor: `${NODE_TYPES.law.color}22`,
+                  color: NODE_TYPES.law.color,
+                }}
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {c.legalTheories && c.legalTheories.length > 0 && (
+        <div className="mt-2 text-xs text-zinc-500">
+          <span className="font-semibold text-zinc-900">Legal theories: </span>
+          {c.legalTheories.join(", ")}
+        </div>
+      )}
+
       <PartyGroup title="Initiating" parties={initiating} />
       <PartyGroup title="Responding" parties={responding} />
 
-      {c.summary && (
-        <p className="mt-3 text-xs leading-relaxed text-slate-300">{c.summary}</p>
-      )}
-
       {c.timeline.length > 0 && (
         <div className="mt-3">
-          <p className="text-xs font-semibold text-slate-200">Timeline</p>
-          <ol className="mt-1 space-y-1.5 border-l border-slate-700 pl-3">
+          <p className="text-xs font-semibold text-zinc-900">Timeline</p>
+          {/* Left rail: a continuous vertical line on the left, with dot
+              markers sitting on it. Badges and event text are left-aligned
+              to the right of the rail. */}
+          <ol className="relative mt-2 space-y-3 border-l border-zinc-200 pl-4">
             {[...c.timeline]
               .sort((a, b) => (a.date < b.date ? -1 : 1))
               .map((e, i) => (
-                <li key={i} className="text-xs text-slate-400">
-                  <span className="font-mono text-slate-500">{e.date}</span>{" "}
-                  {e.event}
+                <li key={i} className="relative">
+                  <span
+                    aria-hidden
+                    className="absolute -left-[calc(1rem+1px)] top-1 z-10 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-zinc-300 ring-2 ring-white"
+                    style={
+                      e.status
+                        ? { backgroundColor: STATUSES[e.status].color }
+                        : undefined
+                    }
+                  />
                   {e.status && (
                     <span
-                      className="ml-1 rounded px-1 text-[10px]"
+                      className="inline-block whitespace-nowrap rounded-full bg-white px-2 py-0.5 text-[10px] font-medium"
                       style={{
                         color: STATUSES[e.status].color,
-                        backgroundColor: `${STATUSES[e.status].color}1a`,
+                        boxShadow: `0 0 0 1px ${STATUSES[e.status].color}66`,
                       }}
                     >
                       {STATUSES[e.status].label}
                     </span>
                   )}
+                  <div className="mt-1 text-xs text-zinc-600">
+                    <span className="font-mono text-zinc-400">{e.date}</span>{" "}
+                    {e.event}
+                  </div>
                 </li>
               ))}
           </ol>
@@ -102,7 +165,7 @@ export default function DetailPanel({
       )}
 
       <div className="mt-3">
-        <p className="text-xs font-semibold text-slate-200">Sources</p>
+        <p className="text-xs font-semibold text-zinc-900">Sources</p>
         <ul className="mt-1 space-y-1">
           {c.sources.map((s) => (
             <li key={s.url}>
@@ -110,7 +173,7 @@ export default function DetailPanel({
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-sky-400 underline underline-offset-2 hover:text-sky-300"
+                className="text-xs text-[#e76a5e] underline underline-offset-2 hover:text-[#c8564b]"
               >
                 {s.label || s.url}
               </a>
@@ -132,16 +195,16 @@ function PartyGroup({
   if (parties.length === 0) return null;
   return (
     <div className="mt-3">
-      <p className="text-xs font-semibold text-slate-200">{title}</p>
+      <p className="text-xs font-semibold text-zinc-900">{title}</p>
       <ul className="mt-1 space-y-0.5">
         {parties.map((p, i) => (
-          <li key={i} className="flex items-center gap-1.5 text-xs text-slate-300">
+          <li key={i} className="flex items-center gap-1.5 text-xs text-zinc-700">
             <span
               className="inline-block h-2 w-2 shrink-0 rounded-full"
               style={{ backgroundColor: ENTITY_CATEGORIES[p.category].color }}
             />
             {p.name}
-            <span className="text-slate-500">· {p.role}</span>
+            <span className="text-zinc-400">· {p.role}</span>
           </li>
         ))}
       </ul>
