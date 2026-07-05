@@ -48,8 +48,15 @@ const MAX_NEW_PER_RUN = 8;
 const MAX_CANDIDATES_TO_LLM = 40; // bound cost per run
 const PER_SOURCE_LIMIT = 25;
 const MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+
+// Default UA. Several gov sites (e.g. FTC/Akamai) 403 non-browser agents, so we
+// present a common browser string. Individual feeds can override via `ua`.
 const UA =
-  "ai-lawsuit-map-scraper/1.0 (+https://github.com; twice-weekly research bot)";
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+// SEC.gov blocks browser-like agents and instead REQUIRES a declared bot UA with
+// contact info (https://www.sec.gov/os/webmaster-faq#developers). Its WAF also
+// rejects UAs containing a parenthetical/URL, so keep it to "name email".
+const SEC_UA = "ai-lawsuit-map-scraper trailmail.sg@gmail.com";
 
 // AI/tech relevance terms used to filter the broad regulator/news feeds.
 const AI_TERMS = [
@@ -87,14 +94,19 @@ const NEWS_QUERIES = [
 ];
 
 // Structured/public feeds. `filter: true` → keep only AI-relevant items.
-const FEEDS: { source: string; url: string; filter: boolean }[] = [
+// `ua` overrides the default User-Agent for sites with specific requirements.
+const FEEDS: { source: string; url: string; filter: boolean; ua?: string }[] = [
+  // FTC/Akamai 403s non-browser agents → served fine with the default browser UA.
   { source: "FTC", url: "https://www.ftc.gov/news-events/news/press-releases/rss", filter: true },
-  { source: "SEC (litigation)", url: "https://www.sec.gov/rss/litigation/litreleases.xml", filter: true },
-  { source: "SEC (press)", url: "https://www.sec.gov/news/pressreleases.rss", filter: true },
-  { source: "DOJ", url: "https://www.justice.gov/feeds/opa/justice-news.xml", filter: true },
+  // SEC moved its litigation feed and requires a declared contact UA.
+  { source: "SEC (litigation)", url: "https://www.sec.gov/enforcement-litigation/litigation-releases/rss", filter: true, ua: SEC_UA },
+  { source: "SEC (press)", url: "https://www.sec.gov/news/pressreleases.rss", filter: true, ua: SEC_UA },
+  // DOJ retired /feeds/opa/justice-news.xml in favour of /news/rss.
+  { source: "DOJ", url: "https://www.justice.gov/news/rss", filter: true },
   { source: "EU Commission", url: "https://ec.europa.eu/commission/presscorner/api/rss?language=en", filter: true },
   { source: "UK CMA", url: "https://www.gov.uk/government/organisations/competition-and-markets-authority.atom", filter: true },
-  { source: "CA Attorney General", url: "https://oag.ca.gov/rss/press-releases", filter: true },
+  // CA OAG press-release RSS now lives at /news/feed.
+  { source: "CA Attorney General", url: "https://oag.ca.gov/news/feed", filter: true },
 ];
 
 // CourtListener recent-docket search across a few core queries (public API).
@@ -187,23 +199,38 @@ function parseFeed(xml: string): Omit<Candidate, "source">[] {
 
 // --- fetching --------------------------------------------------------------
 
-async function fetchText(url: string): Promise<string | null> {
+// A fetch outcome classified so callers can log block/dead/skip distinctly.
+type FetchResult = {
+  text: string | null;
+  status: number | null;
+  reason: "ok" | "block" | "dead" | "error";
+};
+
+function classifyStatus(status: number): "block" | "dead" | "error" {
+  if (status === 401 || status === 403 || status === 429) return "block";
+  if (status === 404 || status === 410) return "dead";
+  return "error";
+}
+
+async function fetchText(url: string, ua: string = UA): Promise<FetchResult> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), 20000);
   try {
     const r = await fetch(url, {
       headers: {
-        "User-Agent": UA,
+        "User-Agent": ua,
         Accept:
           "application/rss+xml, application/atom+xml, application/xml, text/xml, application/json;q=0.9, */*;q=0.8",
       },
       signal: ctrl.signal,
     });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return await r.text();
+    if (!r.ok) {
+      return { text: null, status: r.status, reason: classifyStatus(r.status) };
+    }
+    return { text: await r.text(), status: r.status, reason: "ok" };
   } catch (e) {
     console.warn(`[scrape] fetch failed ${url}: ${(e as Error).message}`);
-    return null;
+    return { text: null, status: null, reason: "error" };
   } finally {
     clearTimeout(timer);
   }
@@ -212,16 +239,30 @@ async function fetchText(url: string): Promise<string | null> {
 async function collectFeeds(): Promise<Candidate[]> {
   const out: Candidate[] = [];
   for (const f of FEEDS) {
-    const xml = await fetchText(f.url);
-    if (!xml) continue;
-    let items = parseFeed(xml);
+    // Each source is isolated: any failure logs and continues to the next feed.
+    let res: FetchResult;
+    try {
+      res = await fetchText(f.url, f.ua);
+    } catch (e) {
+      console.warn(`[scrape] ${f.source}: SKIP (unexpected ${(e as Error).message})`);
+      continue;
+    }
+    if (!res.text) {
+      const label =
+        res.reason === "block" ? "BLOCKED" : res.reason === "dead" ? "DEAD" : "SKIP";
+      console.warn(
+        `[scrape] ${f.source}: ${label} (HTTP ${res.status ?? "n/a"}) ${f.url}`,
+      );
+      continue;
+    }
+    let items = parseFeed(res.text);
     if (f.filter) {
       items = items.filter((it) => AI_RE.test(`${it.title} ${it.rawSnippet}`));
     }
     for (const it of items.slice(0, PER_SOURCE_LIMIT)) {
       out.push({ ...it, source: f.source });
     }
-    console.log(`[scrape] ${f.source}: ${items.length} relevant item(s)`);
+    console.log(`[scrape] ${f.source}: OK — ${items.length} relevant item(s)`);
   }
   return out;
 }
@@ -232,9 +273,12 @@ async function collectNews(): Promise<Candidate[]> {
     const url = `https://news.google.com/rss/search?q=${encodeURIComponent(
       q,
     )}&hl=en-US&gl=US&ceid=US:en`;
-    const xml = await fetchText(url);
-    if (!xml) continue;
-    for (const it of parseFeed(xml).slice(0, 10)) {
+    const res = await fetchText(url);
+    if (!res.text) {
+      console.warn(`[scrape] Google News "${q}": SKIP (HTTP ${res.status ?? "n/a"})`);
+      continue;
+    }
+    for (const it of parseFeed(res.text).slice(0, 10)) {
       out.push({ ...it, source: `Google News: ${q}` });
     }
   }
@@ -248,10 +292,13 @@ async function collectCourtListener(): Promise<Candidate[]> {
     const url = `https://www.courtlistener.com/api/rest/v4/search/?q=${encodeURIComponent(
       q,
     )}&type=r&order_by=dateFiled%20desc`;
-    const body = await fetchText(url);
-    if (!body) continue;
+    const res = await fetchText(url);
+    if (!res.text) {
+      console.warn(`[scrape] CourtListener "${q}": SKIP (HTTP ${res.status ?? "n/a"})`);
+      continue;
+    }
     try {
-      const json = JSON.parse(body) as {
+      const json = JSON.parse(res.text) as {
         results?: Array<{
           caseName?: string;
           absolute_url?: string;
@@ -348,37 +395,102 @@ Return ONLY a JSON array (no prose) of the RELEVANT items, at most ${MAX_NEW_PER
 
 If none are relevant, return [].
 
+OUTPUT RULES: Return only valid JSON. No markdown, no code fences, no comments, no trailing commas. The response must be a single JSON array and nothing else.
+
 CANDIDATES:
 ${list}`;
 }
 
-function stripToJson(text: string): unknown[] {
-  const fence = [...text.matchAll(/```(?:json)?\s*([\s\S]*?)```/g)].pop();
-  const raw = fence
-    ? fence[1]
-    : text.slice(text.indexOf("["), text.lastIndexOf("]") + 1);
-  if (!raw.trim()) return [];
+/**
+ * Best-effort extraction of a JSON array/object from an LLM response that may
+ * be wrapped in markdown fences, prefixed with prose, or contain trailing
+ * commas. Never throws — returns [] on any failure and logs a short preview.
+ */
+function extractJson(text: string): unknown[] {
+  const preview = (s: string) => s.replace(/\s+/g, " ").trim().slice(0, 200);
+  if (!text || !text.trim()) return [];
+
+  // 1. strip ```json / ``` fences, keeping the fenced body if present
+  let body = text.trim();
+  const fence = [...body.matchAll(/```(?:json)?\s*([\s\S]*?)```/gi)].pop();
+  if (fence) body = fence[1].trim();
+
+  // 2. locate the first top-level array or object by scanning for balanced
+  //    brackets (string- and escape-aware so braces inside strings don't count)
+  const start = (() => {
+    const a = body.indexOf("[");
+    const o = body.indexOf("{");
+    if (a === -1) return o;
+    if (o === -1) return a;
+    return Math.min(a, o);
+  })();
+  if (start === -1) {
+    console.error(`[scrape] no JSON found in Gemini response: ${preview(body)}`);
+    return [];
+  }
+
+  const open = body[start];
+  const close = open === "[" ? "]" : "}";
+  let depth = 0;
+  let inStr = false;
+  let esc = false;
+  let end = -1;
+  for (let i = start; i < body.length; i++) {
+    const ch = body[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (ch === "\\") esc = true;
+      else if (ch === '"') inStr = false;
+      continue;
+    }
+    if (ch === '"') inStr = true;
+    else if (ch === open) depth++;
+    else if (ch === close && --depth === 0) {
+      end = i;
+      break;
+    }
+  }
+  let raw = end === -1 ? body.slice(start) : body.slice(start, end + 1);
+
+  // 3. remove obvious trailing commas before ] or }
+  raw = raw.replace(/,\s*([\]}])/g, "$1");
+
+  // 4. parse; normalize objects into a single-item array
   try {
-    const p = JSON.parse(raw);
-    return Array.isArray(p) ? p : [];
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return parsed;
+    if (parsed && typeof parsed === "object") return [parsed];
+    return [];
   } catch (e) {
-    console.error("[scrape] could not parse Gemini JSON:", (e as Error).message);
+    console.error(
+      `[scrape] could not parse Gemini JSON: ${(e as Error).message} — response preview: ${preview(raw)}`,
+    );
     return [];
   }
 }
 
 async function classifyWithGemini(cands: Candidate[]): Promise<unknown[]> {
+  console.log(`[scrape] Classifying ${cands.length} candidates with Gemini`);
   const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
-  const res = await ai.models.generateContent({
-    model: MODEL,
-    contents: buildPrompt(cands),
-    config: {
-      temperature: 0.1,
-      maxOutputTokens: 8192,
-      responseMimeType: "application/json",
-    },
-  });
-  return stripToJson(res.text ?? "");
+  let res;
+  try {
+    res = await ai.models.generateContent({
+      model: MODEL,
+      contents: buildPrompt(cands),
+      config: {
+        temperature: 0.1,
+        maxOutputTokens: 8192,
+        // force strict JSON output when the model/SDK supports it
+        responseMimeType: "application/json",
+      },
+    });
+  } catch (e) {
+    console.error(`[scrape] Gemini request failed: ${(e as Error).message}`);
+    return [];
+  }
+  const items = extractJson(res.text ?? "");
+  console.log(`[scrape] Gemini returned ${items.length} relevant items`);
+  return items;
 }
 
 // --- normalize one Gemini item into a validated Case ----------------------

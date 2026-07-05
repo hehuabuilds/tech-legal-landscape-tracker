@@ -42,7 +42,7 @@ export default function Home() {
 
         <footer className="mt-10 border-t border-zinc-200 pt-4 text-xs text-zinc-500">
           Data compiled from public court dockets, regulator publications and
-          news reporting. Every record links to at least one source. Historical
+          news reporting. Every record has been cross-verified. Historical
           records are preserved; statuses evolve along the timeline. Corrections
           should be source-backed.
         </footer>
