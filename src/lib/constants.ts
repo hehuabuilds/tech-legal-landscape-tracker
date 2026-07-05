@@ -130,6 +130,46 @@ export const ENTITY_CATEGORIES: Record<
   other: { label: "Other", color: "#94a3b8", size: 3.5 },
 };
 
+// ---------------------------------------------------------------------------
+// Outcome / ripple effects: sentiment channels + lean.
+// Public reaction is tracked per channel so social platforms (Reddit, X,
+// Instagram, TikTok) sit alongside traditional press rather than being
+// collapsed into a single "press" bucket.
+// ---------------------------------------------------------------------------
+export const SENTIMENT_CHANNEL_KEYS = [
+  "news",
+  "reddit",
+  "x",
+  "instagram",
+  "tiktok",
+  "other",
+] as const;
+export type SentimentChannel = (typeof SENTIMENT_CHANNEL_KEYS)[number];
+
+export const SENTIMENT_CHANNELS: Record<
+  SentimentChannel,
+  { label: string; icon: string; color: string }
+> = {
+  news: { label: "News", icon: "📰", color: "#64748b" },
+  reddit: { label: "Reddit", icon: "👽", color: "#ff4500" },
+  x: { label: "X", icon: "𝕏", color: "#0f172a" },
+  instagram: { label: "Instagram", icon: "📷", color: "#c13584" },
+  tiktok: { label: "TikTok", icon: "🎵", color: "#0f172a" },
+  other: { label: "Social", icon: "💬", color: "#94a3b8" },
+};
+
+export const SENTIMENT_LEAN_KEYS = ["positive", "mixed", "negative"] as const;
+export type SentimentLean = (typeof SENTIMENT_LEAN_KEYS)[number];
+
+export const SENTIMENT_LEANS: Record<
+  SentimentLean,
+  { label: string; color: string }
+> = {
+  positive: { label: "Positive", color: "#34d399" },
+  mixed: { label: "Mixed", color: "#fbbf24" },
+  negative: { label: "Negative", color: "#f87171" },
+};
+
 // Party roles / sides
 export const PARTY_ROLE_KEYS = [
   "plaintiff",

@@ -6,6 +6,8 @@ import {
   CASE_TYPES,
   ACTION_TYPES,
   ENTITY_CATEGORIES,
+  SENTIMENT_CHANNELS,
+  SENTIMENT_LEANS,
 } from "@/lib/constants";
 import { statusAsOf } from "@/lib/filter";
 import { ISSUE_CLUSTERS, type IssueKey } from "@/lib/issues";
@@ -164,37 +166,118 @@ export default function DetailPanel({
         </div>
       )}
 
-      {c.outcome &&
-        ((c.outcome.impact && c.outcome.impact.length > 0) ||
-          (c.outcome.sentiment && c.outcome.sentiment.length > 0)) && (
-          <div className="mt-3">
-            <p className="text-xs font-semibold text-zinc-900">Outcome</p>
-            {c.outcome.impact && c.outcome.impact.length > 0 && (
-              <div className="mt-1.5">
-                <p className="text-[11px] font-medium text-zinc-500">
-                  Effect on statutes &amp; other cases
+      {(() => {
+        const o = c.outcome;
+        if (!o) return null;
+        const hasLegislative = !!o.legislative && o.legislative.length > 0;
+        const hasMarket = !!o.market && o.market.length > 0;
+        const hasSentiment = !!o.sentiment && o.sentiment.length > 0;
+        if (!hasLegislative && !hasMarket && !hasSentiment) return null;
+        return (
+          <section className="mt-4 rounded-lg border border-[#e76a5e]/25 bg-[#e76a5e]/[0.04] p-3.5">
+            <div className="flex items-center gap-1.5">
+              <span aria-hidden className="text-sm leading-none">
+                🌊
+              </span>
+              <h4 className="text-xs font-semibold text-zinc-900">
+                Outcome &amp; ripple effects
+              </h4>
+            </div>
+            <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
+              How the ruling rippled outward — into law, markets and public
+              opinion.
+            </p>
+
+            {hasLegislative && (
+              <div className="mt-3">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
+                  ⚖️ Legislative &amp; legal ripple
                 </p>
-                <ul className="mt-1 list-disc space-y-1 pl-4 text-xs text-zinc-600 marker:text-zinc-300">
-                  {c.outcome.impact.map((item, i) => (
+                <ul className="mt-1.5 list-disc space-y-1 pl-4 text-xs leading-relaxed text-zinc-600 marker:text-[#e76a5e]/50">
+                  {o.legislative!.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
               </div>
             )}
-            {c.outcome.sentiment && c.outcome.sentiment.length > 0 && (
-              <div className="mt-2">
-                <p className="text-[11px] font-medium text-zinc-500">
-                  Public sentiment
+
+            {hasMarket && (
+              <div className="mt-3">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
+                  📈 Market dynamics
                 </p>
-                <ul className="mt-1 list-disc space-y-1 pl-4 text-xs text-zinc-600 marker:text-zinc-300">
-                  {c.outcome.sentiment.map((item, i) => (
+                <ul className="mt-1.5 list-disc space-y-1 pl-4 text-xs leading-relaxed text-zinc-600 marker:text-[#e76a5e]/50">
+                  {o.market!.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
               </div>
             )}
-          </div>
-        )}
+
+            {hasSentiment && (
+              <div className="mt-3">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
+                  💬 Public &amp; social sentiment
+                </p>
+                <ul className="mt-1.5 space-y-1.5">
+                  {o.sentiment!.map((s, i) => {
+                    const ch = SENTIMENT_CHANNELS[s.channel];
+                    const lean = s.lean ? SENTIMENT_LEANS[s.lean] : null;
+                    return (
+                      <li
+                        key={i}
+                        className="rounded-md border border-zinc-200 bg-white p-2"
+                      >
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          <span
+                            className="inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] font-medium"
+                            style={{
+                              backgroundColor: `${ch.color}1a`,
+                              color: ch.color,
+                            }}
+                          >
+                            <span aria-hidden>{ch.icon}</span>
+                            {ch.label}
+                          </span>
+                          {lean && (
+                            <span
+                              className="inline-flex items-center gap-1 text-[10px] font-medium"
+                              style={{ color: lean.color }}
+                            >
+                              <span
+                                aria-hidden
+                                className="inline-block h-1.5 w-1.5 rounded-full"
+                                style={{ backgroundColor: lean.color }}
+                              />
+                              {lean.label}
+                            </span>
+                          )}
+                        </div>
+                        <p className="mt-1 text-xs leading-relaxed text-zinc-600">
+                          {s.summary}
+                          {s.sourceUrl && (
+                            <>
+                              {" "}
+                              <a
+                                href={s.sourceUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#e76a5e] underline underline-offset-2 hover:text-[#c8564b]"
+                              >
+                                source
+                              </a>
+                            </>
+                          )}
+                        </p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </section>
+        );
+      })()}
 
       <div className="mt-3">
         <p className="text-xs font-semibold text-zinc-900">Sources</p>

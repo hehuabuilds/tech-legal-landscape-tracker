@@ -8,6 +8,8 @@ import {
   PARTY_SIDE_KEYS,
   CONFIDENCE_KEYS,
   REVIEW_STATUS_KEYS,
+  SENTIMENT_CHANNEL_KEYS,
+  SENTIMENT_LEAN_KEYS,
 } from "./constants";
 
 // A source must always be a real URL — schema-level enforcement of the rule
@@ -36,6 +38,16 @@ export const timelineEventSchema = z.object({
   sourceUrl: z.string().nullish(),
 });
 
+// A public-sentiment signal: one channel's reaction to the outcome. Kept
+// coarse (a short summary + optional lean + optional source) because social
+// reaction is summarized editorially, not scraped verbatim.
+export const sentimentSignalSchema = z.object({
+  channel: z.enum(SENTIMENT_CHANNEL_KEYS),
+  lean: z.enum(SENTIMENT_LEAN_KEYS).nullish(),
+  summary: z.string().min(1),
+  sourceUrl: z.string().nullish(),
+});
+
 export const caseSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
@@ -55,10 +67,15 @@ export const caseSchema = z.object({
   // outcome / ripple effects — how the matter landed and how it was received
   outcome: z
     .object({
-      // effect on statutes, regulations, or other cases (precedent, citations…)
-      impact: z.array(z.string()).optional(),
-      // public / press / market sentiment
-      sentiment: z.array(z.string()).optional(),
+      // legal / legislative ripple: effect on statutes, regulations, or other
+      // cases (precedent, citations), domestically and internationally.
+      legislative: z.array(z.string()).optional(),
+      // market dynamics: stock moves, funding, licensing shifts, industry
+      // behavior changes triggered by the matter.
+      market: z.array(z.string()).optional(),
+      // public / social sentiment, one signal per channel + reaction so
+      // Reddit / X / Instagram sit alongside traditional press.
+      sentiment: z.array(sentimentSignalSchema).optional(),
     })
     .nullish(),
   // issue clusters (layer-1 anchors) — derived at load if absent
@@ -75,6 +92,7 @@ export const caseSchema = z.object({
 });
 
 export type Source = z.infer<typeof sourceSchema>;
+export type SentimentSignal = z.infer<typeof sentimentSignalSchema>;
 export type Party = z.infer<typeof partySchema>;
 export type TimelineEvent = z.infer<typeof timelineEventSchema>;
 export type Case = z.infer<typeof caseSchema>;

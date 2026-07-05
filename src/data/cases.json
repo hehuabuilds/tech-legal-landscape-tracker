@@ -3726,15 +3726,36 @@
       "charitable trust oversight"
     ],
     "outcome": {
-      "impact": [
+      "legislative": [
         "Established that state AGs can use charitable-trust authority to condition an AI lab's corporate restructuring, setting a template other states may follow.",
         "Binding memoranda require continued nonprofit control of OpenAI's board and an independent safety committee empowered to halt model releases.",
         "Cited by commentators as precedent for AG oversight of other nonprofit-to-PBC conversions in the AI sector."
       ],
+      "market": [
+        "Removed a key regulatory overhang on OpenAI's for-profit recapitalization, easing investor uncertainty around the conversion.",
+        "Reinforced expectations that future AI-lab restructurings will need to bake in enforceable safety-governance concessions to clear state review."
+      ],
       "sentiment": [
-        "Child-safety advocates welcomed the enforceable commitments but argued the non-objection let the recapitalization proceed too readily.",
-        "Investors and OpenAI framed the outcome as regulatory clearance, easing uncertainty around the for-profit conversion.",
-        "Some governance critics viewed the 'statement of non-objection' as a soft touch that stopped short of blocking the deal."
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Child-safety advocates welcomed the enforceable commitments but argued the non-objection let the recapitalization proceed too readily."
+        },
+        {
+          "channel": "news",
+          "lean": "positive",
+          "summary": "Investors and OpenAI framed the outcome as regulatory clearance, easing uncertainty around the for-profit conversion."
+        },
+        {
+          "channel": "x",
+          "lean": "negative",
+          "summary": "AI-governance commentators on X criticized the 'statement of non-objection' as a soft touch that stopped short of blocking the deal."
+        },
+        {
+          "channel": "reddit",
+          "lean": "mixed",
+          "summary": "Threads in AI and tech-policy subreddits debated whether nonprofit board control is a meaningful safeguard or a formality once the for-profit arm holds the capital."
+        }
       ]
     }
   },
