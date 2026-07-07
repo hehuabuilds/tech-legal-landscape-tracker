@@ -185,7 +185,7 @@ export default function DetailPanel({
             {hasLegislative && (
               <div className="mt-3">
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
-                  ⚖️ Legislative &amp; legal ripple
+                  ✶ Legislative &amp; legal ripple
                 </p>
                 <ul className="mt-1.5 list-disc space-y-1 pl-4 text-xs leading-relaxed text-zinc-600 marker:text-[#e76a5e]/50">
                   {o.legislative!.map((item, i) => (
@@ -198,7 +198,7 @@ export default function DetailPanel({
             {hasMarket && (
               <div className="mt-3">
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
-                  📈 Market dynamics
+                  ✶ Market dynamics
                 </p>
                 <ul className="mt-1.5 list-disc space-y-1 pl-4 text-xs leading-relaxed text-zinc-600 marker:text-[#e76a5e]/50">
                   {o.market!.map((item, i) => (
@@ -211,7 +211,7 @@ export default function DetailPanel({
             {hasSentiment && (
               <div className="mt-3">
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
-                  💬 Public &amp; social sentiment
+                  ✶ Public &amp; social sentiment
                 </p>
                 <ul className="mt-1.5 space-y-1.5">
                   {o.sentiment!.map((s, i) => {
