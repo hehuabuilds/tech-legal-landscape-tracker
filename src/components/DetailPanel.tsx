@@ -177,10 +177,6 @@ export default function DetailPanel({
             <h4 className="text-xs font-semibold text-zinc-900">
               Outcome &amp; ripple effects
             </h4>
-            <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
-              How the ruling rippled outward — into law, markets and public
-              opinion.
-            </p>
 
             {hasLegislative && (
               <div className="mt-3">
