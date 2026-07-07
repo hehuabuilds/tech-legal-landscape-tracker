@@ -6,8 +6,7 @@ import {
   CASE_TYPES,
   ACTION_TYPES,
   ENTITY_CATEGORIES,
-  SENTIMENT_CHANNELS,
-  SENTIMENT_LEANS,
+  sourceName,
 } from "@/lib/constants";
 import { statusAsOf } from "@/lib/filter";
 import { ISSUE_CLUSTERS, type IssueKey } from "@/lib/issues";
@@ -175,14 +174,9 @@ export default function DetailPanel({
         if (!hasLegislative && !hasMarket && !hasSentiment) return null;
         return (
           <section className="mt-4 rounded-lg border border-[#e76a5e]/25 bg-[#e76a5e]/[0.04] p-3.5">
-            <div className="flex items-center gap-1.5">
-              <span aria-hidden className="text-sm leading-none">
-                🌊
-              </span>
-              <h4 className="text-xs font-semibold text-zinc-900">
-                Outcome &amp; ripple effects
-              </h4>
-            </div>
+            <h4 className="text-xs font-semibold text-zinc-900">
+              Outcome &amp; ripple effects
+            </h4>
             <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
               How the ruling rippled outward — into law, markets and public
               opinion.
@@ -221,39 +215,12 @@ export default function DetailPanel({
                 </p>
                 <ul className="mt-1.5 space-y-1.5">
                   {o.sentiment!.map((s, i) => {
-                    const ch = SENTIMENT_CHANNELS[s.channel];
-                    const lean = s.lean ? SENTIMENT_LEANS[s.lean] : null;
                     return (
                       <li
                         key={i}
                         className="rounded-md border border-zinc-200 bg-white p-2"
                       >
-                        <div className="flex flex-wrap items-center gap-1.5">
-                          <span
-                            className="inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] font-medium"
-                            style={{
-                              backgroundColor: `${ch.color}1a`,
-                              color: ch.color,
-                            }}
-                          >
-                            <span aria-hidden>{ch.icon}</span>
-                            {ch.label}
-                          </span>
-                          {lean && (
-                            <span
-                              className="inline-flex items-center gap-1 text-[10px] font-medium"
-                              style={{ color: lean.color }}
-                            >
-                              <span
-                                aria-hidden
-                                className="inline-block h-1.5 w-1.5 rounded-full"
-                                style={{ backgroundColor: lean.color }}
-                              />
-                              {lean.label}
-                            </span>
-                          )}
-                        </div>
-                        <p className="mt-1 text-xs leading-relaxed text-zinc-600">
+                        <p className="text-xs leading-relaxed text-zinc-600">
                           {s.summary}
                           {s.sourceUrl && (
                             <>
@@ -264,7 +231,7 @@ export default function DetailPanel({
                                 rel="noopener noreferrer"
                                 className="text-[#e76a5e] underline underline-offset-2 hover:text-[#c8564b]"
                               >
-                                source
+                                {sourceName(s.sourceUrl)}
                               </a>
                             </>
                           )}

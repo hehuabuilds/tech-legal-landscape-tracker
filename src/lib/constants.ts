@@ -170,6 +170,52 @@ export const SENTIMENT_LEANS: Record<
   negative: { label: "Negative", color: "#f87171" },
 };
 
+// Human-readable publisher names for source links, keyed by bare hostname
+// (leading "www." stripped). Anything not listed falls back to its cleaned
+// hostname via sourceName() below.
+const SOURCE_NAMES: Record<string, string> = {
+  "advertisinglaw.fkks.com": "Frankfurt Kurnit",
+  "authorsguild.org": "Authors Guild",
+  "authorsalliance.org": "Authors Alliance",
+  "blog.ericgoldman.org": "Eric Goldman Blog",
+  "deadline.com": "Deadline",
+  "dig.watch": "Digital Watch",
+  "digiday.com": "Digiday",
+  "news.bloomberglaw.com": "Bloomberg Law",
+  "techcrunch.com": "TechCrunch",
+  "therecord.media": "The Record",
+  "ttms.com": "TTMS",
+  "404media.co": "404 Media",
+  "abajournal.com": "ABA Journal",
+  "aljazeera.com": "Al Jazeera",
+  "billboard.com": "Billboard",
+  "cnbc.com": "CNBC",
+  "cnn.com": "CNN",
+  "dandodiary.com": "D&O Diary",
+  "ftc.gov": "FTC",
+  "goodwinlaw.com": "Goodwin",
+  "musicbusinessworldwide.com": "Music Business Worldwide",
+  "nbcnews.com": "NBC News",
+  "npr.org": "NPR",
+  "osborneclarke.com": "Osborne Clarke",
+  "pymnts.com": "PYMNTS",
+  "rappler.com": "Rappler",
+  "route-fifty.com": "Route Fifty",
+};
+
+// Turn a source URL into a readable publisher name. Uses the curated map above
+// when available, otherwise falls back to the bare hostname (e.g. "example.com").
+export function sourceName(url: string): string {
+  let host: string;
+  try {
+    host = new URL(url).hostname;
+  } catch {
+    return url;
+  }
+  const bare = host.replace(/^www\./, "");
+  return SOURCE_NAMES[host] ?? SOURCE_NAMES[bare] ?? bare;
+}
+
 // Party roles / sides
 export const PARTY_ROLE_KEYS = [
   "plaintiff",
