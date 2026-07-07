@@ -70,7 +70,26 @@
     "legalTheories": [
       "copyright infringement",
       "fair use (defense)"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Judge Alsup's June 2025 order established that training LLMs on lawfully acquired books is transformative fair use, while downloading and retaining pirated copies from shadow libraries is not, shaping the fair-use framework for AI copyright suits.",
+        "The ~$1.5 billion settlement (~$3,000 across roughly 500,000 works) is the largest publicly reported copyright recovery in US history and requires Anthropic to destroy its pirated LibGen and PiLiMi datasets and certify deletion.",
+        "The deal is widely cited as a template pressuring other AI developers facing similar suits toward licensing lawfully acquired data rather than scraping pirated shadow libraries."
+      ],
+      "market": [
+        "Legal commentators framed the settlement as accelerating a shift toward market-based licensing of training data, with AI firms increasingly striking deals with publishers, news outlets and rights holders.",
+        "The Authors Guild cast the payout as proof AI companies can compensate creators without undermining innovation, predicting more licensing that gives authors both compensation and control."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Coverage framed the payout as a landmark victory for authors while stressing that the broader fair-use questions around web-scraped data remain unresolved.",
+          "sourceUrl": "https://www.npr.org/2025/09/05/nx-s1-5529404/anthropic-settlement-authors-copyright-ai"
+        }
+      ]
+    }
   },
   {
     "id": "kadrey-v-meta-platforms",
@@ -129,7 +148,31 @@
     "legalTheories": [
       "copyright infringement",
       "fair use (defense)"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Judge Chhabria's June 25, 2025 summary judgment held Meta's use of books to train Llama was highly transformative fair use, but stressed the ruling turned on plaintiffs' failure to develop a 'market dilution' theory rather than endorsing AI training broadly.",
+        "The opinion articulated a roadmap for future plaintiffs, warning that better evidence of market harm from AI-generated competing works could defeat fair use, a theory now expected to be litigated across AI copyright cases.",
+        "The decision landed alongside Bartz v. Anthropic as the second N.D. Cal. ruling finding LLM training can be fair use, while both flagged that retaining pirated copies raises separate liability."
+      ],
+      "market": [
+        "The Authors Guild expanded author-controlled licensing efforts, criticizing publisher-led deals such as HarperCollins' $5,000-per-title 50/50 split and partnering with Created by Humans to keep authors 'in the driver's seat' on AI licensing."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Legal and trade press framed the outcome as a narrow, fact-specific win for Meta that left the door open for future author challenges.",
+          "sourceUrl": "https://www.goodwinlaw.com/en/insights/publications/2025/06/alerts-practices-aiml-northern-district-of-california-judge-rules"
+        },
+        {
+          "channel": "other",
+          "lean": "negative",
+          "summary": "The Authors Guild characterized the decision as only a technical, procedural win for Meta, arguing the court's reasoning on market harm ultimately favors authors.",
+          "sourceUrl": "https://authorsguild.org/news/meta-ai-ruling-meta-gets-technical-win-but-law-favors-authors/"
+        }
+      ]
+    }
   },
   {
     "id": "nyt-v-openai-microsoft-sdny",
@@ -346,7 +389,25 @@
     "legalTheories": [
       "copyright infringement",
       "fair use (defense)"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Judge Bibas's February 2025 ruling was the first US decision to reject a fair-use defense for AI training, holding Ross's copying of Westlaw headnotes commercial and non-transformative under Warhol v. Goldsmith.",
+        "The court expressly limited its holding to non-generative AI, leaving open how fair use applies to generative models, and is expected to be cited in nearly every subsequent AI copyright case.",
+        "The Third Circuit granted interlocutory appeal in June 2025, positioning it to become the first appeals court to weigh fair use for AI training data."
+      ],
+      "market": [
+        "Commentators warned the ruling signals an emerging AI-training licensing market in which holders of high-value content like Westlaw become gatekeepers who can charge for training access."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Legal-industry analysts framed it as a landmark first AI fair-use ruling but many, including the Authors Alliance, criticized the opinion's reasoning as unpersuasive and narrow.",
+          "sourceUrl": "https://www.authorsalliance.org/2025/02/13/thomson-reuters-v-ross-the-first-ai-fair-use-ruling-fails-to-persuade/"
+        }
+      ]
+    }
   },
   {
     "id": "raw-story-v-openai-sdny",
@@ -409,7 +470,22 @@
     ],
     "legalTheories": [
       "CMI removal"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Judge McMahon's November 2024 dismissal established an influential SDNY precedent that removal of copyright-management information alone, without dissemination or concrete harm, is too abstract to confer Article III standing under DMCA Section 1202.",
+        "The ruling has been cited across the wave of AI-training copyright suits and was contrasted by other SDNY judges (e.g., in The Intercept v. OpenAI) when assessing DMCA CMI standing.",
+        "The Second Circuit agreed to hear the plaintiffs' appeal on the standing question, with oral argument scheduled for March 18, 2026, and no appellate decision issued as of July 2026."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Legal and IP trade press framed the dismissal as an early procedural win for OpenAI while noting the door remained open on appeal and via amended pleadings.",
+          "sourceUrl": "https://news.bloomberglaw.com/ip-law/openai-defeats-raw-story-copyright-training-lawsuit-for-now"
+        }
+      ]
+    }
   },
   {
     "id": "intercept-media-v-openai-sdny",
@@ -1000,7 +1076,22 @@
     "legalTheories": [
       "copyright infringement",
       "trademark infringement"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "In the UK's first major generative-AI copyright trial, the High Court held on 4 November 2025 that an AI model's trained weights are not an infringing 'copy' under the CDPA, rejecting Getty's secondary-infringement claim.",
+        "The ruling established that where AI training occurs outside the UK, English courts may lack jurisdiction over primary training-copyright claims, leaving the core scraping-and-training question unresolved.",
+        "Getty was granted permission on 1 December 2025 to appeal the dismissal of its secondary copyright infringement claim, keeping the precedent open to challenge."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Legal and industry commentators characterized the judgment as a landmark win for AI developers while stressing it sidestepped the central question of whether training on scraped works infringes copyright.",
+          "sourceUrl": "https://www.osborneclarke.com/insights/getty-v-stability-ai-stability-ai-generates-big-win-english-courts-landmark-first-judgment"
+        }
+      ]
+    }
   },
   {
     "id": "andersen-v-stability-ai",
@@ -1223,7 +1314,29 @@
     "statutes": [],
     "legalTheories": [
       "copyright infringement"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The Munich Regional Court's 11 November 2025 judgment (case 42 O 14139/24) held that 'memorization' of song lyrics in model parameters and their reproduction in output are infringing reproductions falling outside the EU text-and-data-mining exception.",
+        "It is the first substantive European court decision to find AI training and output can infringe copyright, and is widely cited as a precedent likely to shape EU generative-AI litigation and licensing.",
+        "OpenAI announced it would appeal, meaning the ruling is not final and may be reviewed by the Munich Higher Regional Court.",
+        "GEMA had already filed a parallel action against music-generation service Suno, signaling a broader rights-holder enforcement strategy following the OpenAI win."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "positive",
+          "summary": "Music-industry and creator-rights outlets framed the ruling as a landmark win for authors, quoting GEMA that the internet is 'not a self-service buffet.'",
+          "sourceUrl": "https://www.musicbusinessworldwide.com/gema-wins-landmark-ruling-against-openai-over-chatgpts-use-of-song-lyrics/"
+        },
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Tech and legal commentators cautioned the first-instance decision remains subject to appeal and creates litigation and compliance risk for AI developers operating in the EU.",
+          "sourceUrl": "https://www.billboard.com/pro/gema-ai-music-copyright-case-open-ai-chatgpt-song-lyrics/"
+        }
+      ]
+    }
   },
   {
     "id": "reddit-v-anthropic-2025",
@@ -1481,7 +1594,30 @@
     "legalTheories": [
       "breach of contract",
       "unfair competition"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "In May 2026 a federal jury unanimously found Musk's claims time-barred by the statute of limitations, and Judge Yvonne Gonzalez Rogers dismissed the case, leaving OpenAI's nonprofit-to-for-profit restructuring unchallenged on the merits.",
+        "Musk announced he would appeal, arguing the verdict turned on a 'calendar technicality' rather than the substance of the alleged breach of OpenAI's founding agreement."
+      ],
+      "market": [
+        "The verdict removed a legal cloud over OpenAI's for-profit conversion and its Microsoft partnership, which Microsoft publicly welcomed as confirming the deal's legitimacy."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "positive",
+          "summary": "The jury's under-two-hour deliberation was widely reported as a decisive win for OpenAI and Sam Altman.",
+          "sourceUrl": "https://www.nbcnews.com/tech/tech-news/openai-elon-musk-case-verdict-rcna345655"
+        },
+        {
+          "channel": "x",
+          "lean": "negative",
+          "summary": "Musk posted on X vowing to appeal, dismissing the outcome as a technicality that never reached the merits.",
+          "sourceUrl": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed"
+        }
+      ]
+    }
   },
   {
     "id": "ftc-6b-ai-partnerships-report",
@@ -1543,7 +1679,21 @@
     "statutes": [
       "FTC Act §6(b)"
     ],
-    "legalTheories": []
+    "legalTheories": [],
+    "outcome": {
+      "legislative": [
+        "The January 17, 2025 staff report flagged competition risks in the $20bn+ Microsoft-OpenAI, Amazon-Anthropic and Google-Anthropic tie-ups, including compute access, engineering-talent control, switching costs and access to sensitive business information.",
+        "Commissioners Ferguson and Holyoak issued a joint concurring-and-dissenting statement, backing publication but urging a 'careful and prudent balance' that avoids charging 'headlong to regulate AI.'"
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Coverage treated the report as a competition warning shot at cloud-AI incumbents while noting the incoming administration signaled a lighter-touch antitrust posture.",
+          "sourceUrl": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-issues-staff-report-ai-partnerships-investments-study"
+        }
+      ]
+    }
   },
   {
     "id": "us-v-google-search-remedies-ai",
@@ -1606,7 +1756,31 @@
     ],
     "legalTheories": [
       "monopolization"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Judge Mehta's September 2025 remedies ruling imposed behavioral relief barring exclusive distribution contracts and extended prohibitions to Google's Gemini app and Assistant, while declining to order divestiture of Chrome or Android.",
+        "The order requires Google to share certain search-index and user-interaction data (excluding ads data), with the court explicitly seeking to prevent Google from leveraging search dominance into GenAI markets.",
+        "Both sides appealed: Google challenged the behavioral remedies and the DOJ cross-appealed to seek Chrome divestiture, with D.C. Circuit arguments expected in late 2026 or 2027."
+      ],
+      "market": [
+        "Alphabet shares jumped about 8% in extended trading after Google avoided the worst-case structural remedies, and Apple stock rose roughly 4% given its search-default arrangement survived."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Coverage cast the ruling as a major win for Google that spared its core business while still constraining AI conduct, a framing echoed by the stock surge.",
+          "sourceUrl": "https://www.cnbc.com/2025/09/02/google-antitrust-search-ruling.html"
+        },
+        {
+          "channel": "other",
+          "lean": "negative",
+          "summary": "The advertising industry reacted with anger and disappointment, viewing the behavioral remedies as too weak to meaningfully change Google's market power.",
+          "sourceUrl": "https://digiday.com/media-buying/angry-and-disappointed-if-not-surprised-the-ad-industry-reacts-to-the-google-search-remedies-ruling/"
+        }
+      ]
+    }
   },
   {
     "id": "doj-nvidia-antitrust-investigation",
@@ -1726,7 +1900,24 @@
     "statutes": [
       "Enterprise Act 2002"
     ],
-    "legalTheories": []
+    "legalTheories": [],
+    "outcome": {
+      "legislative": [
+        "The CMA concluded on 5 March 2025 that the Microsoft-OpenAI partnership does not qualify for review under the Enterprise Act 2002, finding Microsoft holds material influence but does not control OpenAI's commercial policy.",
+        "The decision set an early UK precedent that large AI-partnership investments need not be treated as reviewable mergers, informing the CMA's approach to subsequent AI tie-ups."
+      ],
+      "market": [
+        "During the inquiry Microsoft renegotiated its cloud agreement with OpenAI in January 2025 to a 'first right of refusal' model, reducing OpenAI's compute reliance and shaping the CMA's no-control finding."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Microsoft welcomed the closure while competition commentators debated whether the CMA's light-touch stance left AI-partnership consolidation under-scrutinized.",
+          "sourceUrl": "https://techcrunch.com/2025/03/05/u-k-s-competition-authority-says-microsofts-openai-partnership-doesnt-quality-for-investigation/"
+        }
+      ]
+    }
   },
   {
     "id": "xai-v-apple-openai-antitrust",
@@ -1905,7 +2096,25 @@
     "reviewStatus": "published",
     "court": "SAG-AFTRA collective bargaining",
     "statutes": [],
-    "legalTheories": []
+    "legalTheories": [],
+    "outcome": {
+      "legislative": [
+        "The 2025 Interactive Media Agreement, ratified 9 July 2025 by a 95.04% to 4.96% vote, added binding AI consent and disclosure requirements for digital-replica use and let performers suspend replica-generation consent during a strike.",
+        "The deal removed the unlimited digital-replica buyout, requiring comparable pay for replica use, and barred companies from creating replicas from non-covered works to bypass the protections.",
+        "It established a contractual template for AI performer protections in interactive media that mirrors gains from SAG-AFTRA's Hollywood AI standards."
+      ],
+      "market": [
+        "The nearly year-long strike ended, restoring performer availability to major game publishers who said the deal delivered 'historic wage increases' and 'industry-leading A.I. protections.'"
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "positive",
+          "summary": "Trade press reported the overwhelming ratification as a landmark for AI worker protections, with union and video-game producers both publicly welcoming the agreement.",
+          "sourceUrl": "https://deadline.com/2025/07/sag-aftra-video-game-agreement-approved-strike-1236453741/"
+        }
+      ]
+    }
   },
   {
     "id": "sag-aftra-fortnite-darth-vader-ulp",
@@ -2386,7 +2595,30 @@
     "statutes": [],
     "legalTheories": [
       "wrongful death / product liability"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The mediated settlements disclosed January 7, 2026 were among the first resolutions of AI chatbot wrongful-death/harm suits, covering coordinated cases in Florida, New York, Colorado and Texas with no admission of liability.",
+        "The settlements are widely viewed as a bellwether that OpenAI and Meta are watching as they defend similar chatbot-harm suits."
+      ],
+      "market": [
+        "Under regulatory and litigation pressure, Character.AI announced in late October 2025 that it would bar users under 18 from open-ended chatbot conversations by November 25, 2025, rolling out age-assurance tools including Persona."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Major outlets framed the settlements as a landmark legal frontier for AI liability while noting terms were confidential and no fault was admitted.",
+          "sourceUrl": "https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit"
+        },
+        {
+          "channel": "other",
+          "lean": "negative",
+          "summary": "Child-safety advocates such as Common Sense Media called the cases 'tragic reminders' that chatbots are unsafe for teens and 'the tip of the iceberg.'",
+          "sourceUrl": "https://techcrunch.com/2026/01/07/google-and-character-ai-negotiate-first-major-settlements-in-teen-chatbot-death-cases/"
+        }
+      ]
+    }
   },
   {
     "id": "kentucky-ag-v-character-technologies",
@@ -2434,7 +2666,22 @@
     "legalTheories": [
       "deceptive practices",
       "unlawful data processing"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Kentucky's January 2026 suit was the first state enforcement action against an AI chatbot company, and legal analysts described the complaint as a template other states could adapt under their own consumer-protection and privacy statutes.",
+        "Pennsylvania followed in May 2026, suing Character.AI over chatbots posing as licensed medical professionals, the first such action announced by a US governor.",
+        "The action built on a December 2025 letter from Kentucky, Pennsylvania, and roughly 40 other attorneys general warning AI firms about 'sycophantic and delusional' generative AI."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "negative",
+          "summary": "Coverage was broadly sympathetic to the AG, emphasizing allegations that Character.AI encouraged self-harm among minors and citing two teen suicides linked to the platform.",
+          "sourceUrl": "https://www.route-fifty.com/artificial-intelligence/2026/01/kentucky-attorney-generals-lawsuit-says-ai-company-preys-youth/410581/"
+        }
+      ]
+    }
   },
   {
     "id": "peralta-v-character-technologies",
@@ -2551,7 +2798,22 @@
     "reviewStatus": "published",
     "court": "U.S. State Attorneys General (NAAG)",
     "statutes": [],
-    "legalTheories": []
+    "legalTheories": [],
+    "outcome": {
+      "legislative": [
+        "The August 2025 warning letter fed a broader regulatory push on AI child safety, coinciding with the FTC's September 11, 2025 Section 6(b) inquiry ordering Alphabet, Character.AI, Meta, OpenAI, Snap, Instagram and xAI to disclose how their companion chatbots affect minors.",
+        "California enacted SB 243, signed October 13, 2025 and effective January 1, 2026, the first US law regulating companion chatbots with minor-safety protocols, AI-disclosure notices, and a private right of action.",
+        "The letter set a coordinated multistate enforcement posture, with several signatory AGs concurrently probing Meta and Character.AI and companies facing a January 16, 2026 response deadline."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "positive",
+          "summary": "Mainstream and tech press amplified the bipartisan 'if you harm kids, you will answer for it' warning as a rare unified stance against AI chatbot risks to children.",
+          "sourceUrl": "https://www.404media.co/44-attorneys-general-to-ai-chatbot-companies-open-letter/"
+        }
+      ]
+    }
   },
   {
     "id": "walters-v-openai-defamation",
@@ -2607,7 +2869,22 @@
     "statutes": [],
     "legalTheories": [
       "defamation"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "On 19 May 2025 a Gwinnett County, Georgia court granted OpenAI summary judgment in the first US defamation suit over an AI-generated 'hallucination', finding no defamatory meaning, no actual malice, and no damages.",
+        "The court reasoned no reasonable reader would treat ChatGPT output flagged by disclaimers as a factual assertion, setting an early precedent that AI hallucinations are unlikely to support defamation liability.",
+        "The ruling reinforced that traditional defamation doctrines, including the public-figure actual-malice standard, govern claims over AI-generated content."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Legal commentators widely framed the decision as a significant early win for AI developers while cautioning it turned partly on case-specific facts like the plaintiff conceding no damages.",
+          "sourceUrl": "https://blog.ericgoldman.org/archives/2025/05/chatgpt-defeats-defamation-lawsuit-over-hallucination-walters-v-openai.htm"
+        }
+      ]
+    }
   },
   {
     "id": "starbuck-v-meta-ai-defamation",
@@ -2663,7 +2940,24 @@
     "statutes": [],
     "legalTheories": [
       "defamation"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The parties settled the Delaware Superior Court defamation suit in August 2025 without a court ruling on AI-defamation liability, leaving the novel question of platform liability for chatbot 'hallucinations' legally unresolved.",
+        "Meta declined to disclose financial terms; Starbuck had originally sought roughly $5 million in damages."
+      ],
+      "market": [
+        "As part of the settlement Meta engaged Starbuck as a paid consultant to its Product Policy team to address alleged political bias and reduce hallucinations in its AI models."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Coverage split between framing the deal as a consumer-fairness win and skepticism over a conservative activist advising Meta on AI 'bias.'",
+          "sourceUrl": "https://www.cnn.com/2025/08/14/tech/robby-starbuck-meta-ai-advisor"
+        }
+      ]
+    }
   },
   {
     "id": "starbuck-v-google-ai-defamation",
@@ -2772,7 +3066,21 @@
     ],
     "legalTheories": [
       "unlawful data processing"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The Garante's January 30, 2025 order imposed an immediate, definitive limitation on DeepSeek's processing of Italian users' personal data and opened a formal investigation, one of the first binding GDPR enforcement actions against a Chinese AI firm.",
+        "Italy's move preceded a wave of DeepSeek restrictions, with South Korea, Australia, Taiwan, India and several US bodies (including NASA and the state of Texas) subsequently banning or restricting the app, largely on government devices."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "negative",
+          "summary": "Coverage cast Italy as the first Western jurisdiction to move against DeepSeek over data-privacy and China data-storage concerns, framing it within a broader security backlash.",
+          "sourceUrl": "https://www.aljazeera.com/news/2025/2/6/which-countries-have-banned-deepseek-and-why"
+        }
+      ]
+    }
   },
   {
     "id": "noyb-openai-holmen-norway",
@@ -2881,7 +3189,25 @@
     "statutes": [],
     "legalTheories": [
       "unlawful data processing"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The PIPC's April 2025 findings concluded DeepSeek transferred Korean users' data, including AI prompt inputs, to four or five firms in China and the US (including ByteDance affiliate Beijing Volcano Engine) without consent.",
+        "The corrective recommendations directed DeepSeek to establish legal grounds for overseas transfers, delete previously transferred prompt data, publish a Korean-language privacy policy, and appoint a domestic representative.",
+        "The case became a reference point for cross-border data-transfer enforcement against foreign AI apps under Korea's Personal Information Protection Act."
+      ],
+      "market": [
+        "DeepSeek accepted the recommendations, notified compliance on April 28, 2025, and resumed availability on Korean app stores the same day after having been pulled since February."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "negative",
+          "summary": "International outlets framed the findings as confirmation of privacy concerns about DeepSeek, highlighting unauthorized transfers of Korean user data to China and the US.",
+          "sourceUrl": "https://www.cnbc.com/2025/04/24/south-korea-says-deepseek-transferred-user-data-to-china-us-without-consent.html"
+        }
+      ]
+    }
   },
   {
     "id": "dpc-ireland-x-grok-training",
@@ -2939,7 +3265,21 @@
     ],
     "legalTheories": [
       "unlawful data processing"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The DPC's April 2025 statutory inquiry into Grok training remains open with no decision, but earlier DPC High Court proceedings concluded in September 2024 when X undertook to permanently cease processing EU/EEA users' public-post data collected between May and August 2024 for Grok training.",
+        "The matter escalated regulatory scrutiny of X, with the DPC announcing a further statutory inquiry on February 17, 2026 into Grok's generation of non-consensual sexualized deepfake images, including of minors."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "European privacy and tech outlets treated the inquiry as a significant GDPR test of AI training on social-media data, noting exposure to fines up to 4% of global turnover.",
+          "sourceUrl": "https://therecord.media/europe-data-privacy-watchdog-case-closed"
+        }
+      ]
+    }
   },
   {
     "id": "dpc-ireland-x-grok-deepfakes",
@@ -3217,7 +3557,21 @@
     "legalTheories": [
       "deceptive practices",
       "unfair competition"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "In December 2025 the FTC voted 2-0 (Chair Ferguson and Commissioner Meador) to reopen and set aside the 2024 Rytr consent order, finding the complaint failed the FTC Act's requirements and unduly burdened AI innovation under the Trump AI Action Plan and executive order.",
+        "The reversal narrowed 'means and instrumentalities' liability for AI tool providers and signaled a retreat from the prior administration's 'Operation AI Comply' enforcement posture."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Advertising- and antitrust-law commentators described the set-aside as a marked pro-innovation shift in FTC AI enforcement, while consumer advocates had earlier backed the original order.",
+          "sourceUrl": "https://www.ftc.gov/news-events/news/press-releases/2025/12/ftc-reopens-sets-aside-rytr-final-order-response-trump-administrations-ai-action-plan"
+        }
+      ]
+    }
   },
   {
     "id": "ftc-workado-ai-detector",
@@ -3275,7 +3629,21 @@
     ],
     "legalTheories": [
       "deceptive practices"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The FTC approved a final consent order on August 28, 2025 barring Workado (f/k/a Content at Scale AI) from making AI content-detection effectiveness claims without competent, reliable supporting evidence, after alleging its '98% accurate' claim tested at ~53% on general content.",
+        "The order requires Workado to retain substantiation evidence and to email affected consumers, and is cited as part of the FTC's broader crackdown on unsubstantiated AI advertising claims."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Advertising-law and trade coverage read the final order as a signal that AI marketing claims must meet the same substantiation standards as any other efficacy claim.",
+          "sourceUrl": "https://advertisinglaw.fkks.com/post/102l358/ftcs-ai-crackdown-continues-workado-ordered-to-drop-unsupported-accuracy-claims"
+        }
+      ]
+    }
   },
   {
     "id": "ftc-cleo-ai-settlement",
@@ -3329,7 +3697,24 @@
     ],
     "legalTheories": [
       "deceptive practices"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The March 2025 stipulated order required Cleo AI to pay $17 million and barred it from misrepresenting cash-advance amounts and speed, part of the FTC's broader crackdown on deceptive fintech and 'dark pattern' subscription practices.",
+        "The order mandated clear disclosure of subscription terms, express informed consent before charging, and a simple cancellation mechanism, reinforcing FTC negative-option and Click-to-Cancel enforcement."
+      ],
+      "market": [
+        "The FTC stated it would use Cleo AI's $17 million payment to provide refunds to harmed consumers."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Trade and legal press reported the settlement neutrally as another FTC fintech action, noting Cleo denied wrongdoing and framed settling as a way to move forward.",
+          "sourceUrl": "https://www.pymnts.com/news/regulation/2025/cleo-ai-settles-17-million-ftc-fast-money-case/"
+        }
+      ]
+    }
   },
   {
     "id": "ftc-donotpay-robot-lawyer-order",
@@ -3386,7 +3771,24 @@
     ],
     "legalTheories": [
       "deceptive practices"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The FTC finalized its order (5-0 vote, January 2025) barring DoNotPay from claiming its service performs like a human lawyer without supporting evidence, requiring $193,000 in monetary relief and notice to 2021-2023 subscribers.",
+        "The action was a marquee case in the FTC's 'Operation AI Comply' sweep, establishing that unsubstantiated AI-capability marketing constitutes deceptive practice under the FTC Act and signaling enforcement against overstated 'AI lawyer' and automation claims."
+      ],
+      "market": [
+        "DoNotPay settled without admitting liability and characterized the affected services as long discontinued, reflecting a retreat from its 'world's first robot lawyer' positioning."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Legal-industry and consumer press cast the settlement as validation of skepticism toward 'robot lawyer' hype while noting the modest monetary penalty.",
+          "sourceUrl": "https://www.abajournal.com/news/article/robot-lawyer-website-donotpay-settles-ftc-claims-it-couldnt-deliver-on-promises"
+        }
+      ]
+    }
   },
   {
     "id": "eu-commission-dsa-x-grok-proceedings",
@@ -3500,7 +3902,26 @@
     ],
     "legalTheories": [
       "prohibited AI practices"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Article 5 bans on 'unacceptable-risk' practices (e.g., social scoring, manipulative and certain biometric systems) became applicable on 2 February 2025, with Commission guidelines published shortly after.",
+        "GPAI provider obligations became applicable on 2 August 2025 alongside the AI Office's final GPAI Code of Practice published 10 July 2025, though Commission enforcement powers over GPAI providers only begin 2 August 2026.",
+        "Adherence to the voluntary Code is treated as evidence of compliance and can be a mitigating factor in setting fines, shaping how providers demonstrate conformity."
+      ],
+      "market": [
+        "Around 26 organizations including Amazon, Anthropic, Google, IBM, Microsoft, OpenAI, Mistral and Cohere signed the GPAI Code as early signatories.",
+        "xAI signed only the Code's Safety and Security chapter and Meta publicly declined to sign, signaling industry divergence over the transparency and copyright commitments."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Legal and tech coverage described broad but uneven industry buy-in, with law firms flagging compliance burdens and reports of lobbying to soften or delay obligations.",
+          "sourceUrl": "https://ttms.com/eu-ai-act-update-2025-code-of-practice-enforcement-industry-reactions/"
+        }
+      ]
+    }
   },
   {
     "id": "agcm-deepseek-consumer-probe",
@@ -3551,7 +3972,21 @@
     "statutes": [],
     "legalTheories": [
       "unfair commercial practices"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "Italy's AGCM closed its consumer-protection probe in January 2026 after accepting DeepSeek's binding commitments to add prominent Italian-language warnings, in-chat and at sign-up, that content is AI-generated and may be inaccurate, with extra warnings for medical, legal and financial topics.",
+        "The commitments are enforceable within a 120-day window, with non-compliance reopening the case and exposing DeepSeek to fines of up to roughly 10 million euros; AGCM applied a similar commitments-based approach to Mistral and Nova AI."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Reported as Italy extracting binding transparency commitments on hallucination risk rather than levying fines, part of a broader AGCM push on AI accuracy disclosures.",
+          "sourceUrl": "https://www.rappler.com/technology/italy-closes-deepseek-probe-artificial-intelligence-hallucinations/"
+        }
+      ]
+    }
   },
   {
     "id": "garante-clothoff-deepfake-stop",
@@ -3608,7 +4043,21 @@
     ],
     "legalTheories": [
       "unlawful data processing"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The Garante's October 3, 2025 emergency order suspended Clothoff's processing of Italian users' data, citing no age restrictions, no consent checks, and no AI-generation labeling as threats to dignity and privacy, especially for minors.",
+        "The authority simultaneously opened a broader formal investigation into 'nudifying' apps generally, signaling wider enforcement against non-consensual deepfake tools."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "positive",
+          "summary": "Coverage largely welcomed the ban as a decisive move against non-consensual deepfake nudes amid rising public concern over the tools' misuse in Italy.",
+          "sourceUrl": "https://dig.watch/updates/italy-bans-deepfake-app-that-undresses-people"
+        }
+      ]
+    }
   },
   {
     "id": "cma-google-strategic-market-status",
@@ -3663,7 +4112,25 @@
     "statutes": [
       "DMCCA"
     ],
-    "legalTheories": []
+    "legalTheories": [],
+    "outcome": {
+      "legislative": [
+        "On October 10, 2025, the CMA issued its final decision designating Google with Strategic Market Status in general search and search advertising under the Digital Markets, Competition and Consumers Act 2024, effective for five years.",
+        "The designation expressly covers AI features including AI Overviews and AI Mode as part of Google's search infrastructure, enabling future targeted conduct requirements.",
+        "The CMA signaled it would consult on specific proportionate remedies by early 2026, marking the first SMS designation under the new UK digital-markets regime."
+      ],
+      "market": [
+        "Google warned that overly restrictive measures could delay product launches such as Gemini AI enhancements and cited large economic contributions, estimating restrictions could cost businesses substantial sums."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Coverage described the designation as a long-anticipated step toward regulating Google's 90%-plus UK search dominance, with critics calling it overdue and Google cautioning against innovation harms.",
+          "sourceUrl": "https://techcrunch.com/2025/10/10/uk-slaps-google-search-with-special-market-status-making-way-for-stricter-regulations/"
+        }
+      ]
+    }
   },
   {
     "id": "ca-de-ag-openai-restructuring-review",
@@ -3811,7 +4278,25 @@
     ],
     "legalTheories": [
       "securities fraud"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The SEC's settled cease-and-desist order marked its first 'AI washing' enforcement action against a public company, finding Presto misrepresented that its Presto Voice product was proprietary when the speech-recognition technology was owned and operated by a third party.",
+        "The SEC imposed no civil penalty, disgorgement, or monitor, citing Presto's cooperation, remedial acts, and financial condition, but the action cemented AI-related disclosure accuracy as a stated enforcement priority.",
+        "It became a reference point in the expanding AI-washing enforcement wave, following the March 2024 Delphia and Global Predictions actions and cited in subsequent guidance on AI disclosure risk."
+      ],
+      "market": [
+        "Presto had already been delisted from Nasdaq in September 2024 amid financial distress, and the no-penalty resolution reflected its diminished condition rather than any market rebound."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Securities-law commentators highlighted the case as a landmark AI-washing precedent while noting the absence of any monetary penalty tempered its deterrent force.",
+          "sourceUrl": "https://www.dandodiary.com/2025/01/articles/artificial-intelligence/sec-files-ai-washing-enforcement-action-against-restaurant-technology-company/"
+        }
+      ]
+    }
   },
   {
     "id": "doj-sec-nate-saniger-ai-fraud",
@@ -3922,7 +4407,25 @@
     ],
     "legalTheories": [
       "abuse of dominance"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "On 24 December 2025 Italy's AGCM, in its Article 102 TFEU abuse-of-dominance probe (Case A576), imposed interim measures ordering Meta to suspend WhatsApp Business terms that would have excluded rival AI chatbots from the platform.",
+        "The interim order found Meta's conduct may unlawfully limit market access and technical development in the AI-chatbot services market, an early EU antitrust intervention against AI self-preferencing on a messaging platform.",
+        "The main investigation into Meta AI's prominence within WhatsApp remains open, so a final infringement decision is still pending."
+      ],
+      "market": [
+        "The order forced Meta to keep the WhatsApp Business API open to competing AI chatbots in Italy rather than exclusively to Meta AI, preserving third-party access in the AI-chatbot market."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Coverage framed the order as a notable regulatory check on Meta's AI ambitions, with Meta calling the decision fundamentally flawed and vowing to appeal.",
+          "sourceUrl": "https://techcrunch.com/2025/12/24/italy-tells-meta-to-suspend-its-policy-that-bans-rival-ai-chatbots-from-whatsapp/"
+        }
+      ]
+    }
   },
   {
     "id": "berlin-dpa-deepseek-dsa-referral",
@@ -3981,6 +4484,24 @@
     "legalTheories": [
       "cross-border data transfer",
       "unlawful data processing"
-    ]
+    ],
+    "outcome": {
+      "legislative": [
+        "The Berlin DPA's 27 June 2025 referral was a novel use of DSA Article 16 to flag alleged GDPR-violating data transfers to China as 'illegal content,' testing whether the DSA notice mechanism can police data-protection breaches.",
+        "The action followed a May 2025 compliance demand DeepSeek refused, and formed part of wider European pressure after Italy's regulator had earlier moved against the app.",
+        "As of mid-2025 neither Apple nor Google had removed DeepSeek from German app stores, with Google indicating it would not act 'for now' while reviewing the notice."
+      ],
+      "market": [
+        "DeepSeek updated its privacy policy on 4 July 2025 to state it does not engage in 'profiling,' addressing one regulator concern while other data-transfer issues remained unresolved."
+      ],
+      "sentiment": [
+        {
+          "channel": "news",
+          "lean": "mixed",
+          "summary": "Tech press framed the referral as an aggressive but untested enforcement move, noting the platforms' non-compliance left the app available despite the 'illegal content' label.",
+          "sourceUrl": "https://techcrunch.com/2025/06/27/germany-tells-apple-google-to-remove-deepseek-from-the-countrys-app-stores/"
+        }
+      ]
+    }
   }
 ]
